@@ -22,7 +22,7 @@ export function SiteFooter() {
           {PHONE_DISPLAY}
         </a>
 
-        <div className="mt-6 space-y-1 border-white/10 pt-6 text-xs text-white/55">
+        <div className="mt-6 space-y-1 pt-6 text-xs text-white/55">
           <p>Área de atendimento sujeita à disponibilidade operacional.</p>
           <p className="text-sm font-semibold text-white/80">
             Todos os direitos reservados — {COMPANY_NAME}
