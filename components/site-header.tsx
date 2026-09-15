@@ -6,7 +6,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 bg-brand-navy text-white shadow-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
         <a href="#" className="flex items-center gap-2.5" aria-label={COMPANY_NAME}>
-          <span className="flex items-center justify-center rounded-md bg-white px-2.5 py-2">
+         <span className="flex items-center justify-center">
             <img
               src="/images/logo-horizonte.png"
               alt={`Logo ${COMPANY_NAME}`}
