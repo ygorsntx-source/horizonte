@@ -38,15 +38,7 @@ const services = [
     imageAlt:
       'Equipe da Horizonte desentupindo uma rede de esgoto em poço de visita com caminhão a vácuo.',
   },
-  {
-    icon: Container,
-    title: 'Serviços relacionados a fossas',
-    description:
-      'Serviços relacionados a fossas, conforme avaliação da necessidade do local.',
-    image: '/images/servico-fossa.png',
-    imageAlt:
-      'Técnico da Horizonte realizando limpeza de fossa com caminhão a vácuo.',
-  },
+  
   {
     icon: Gauge,
     title: 'Hidrojateamento',
