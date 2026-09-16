@@ -3,21 +3,21 @@ import { Star, Quote } from 'lucide-react'
 const testimonials = [
   {
     name: 'Ana Paula R.',
-    photo: '/images/depoimento-1.png',
+    photo: '/images/depoimento-1.webp',
     location: 'Belo Horizonte, MG',
     comment:
       'Vaso sanitário entupido de noite e resolveram no mesmo dia. Equipe educada e o serviço ficou limpo, sem sujeira pela casa.',
   },
   {
     name: 'Marcelo T.',
-    photo: '/images/depoimento-2.png',
+    photo: '/images/depoimento-2.webp',
     location: 'Contagem, MG',
     comment:
       'Fizeram a visita, explicaram o problema e passaram o valor antes de começar. Sem surpresa na hora de pagar. Recomendo.',
   },
   {
     name: 'Juliana S.',
-    photo: '/images/depoimento-3.png',
+    photo: '/images/depoimento-3.webp',
     location: 'Betim, MG',
     comment:
       'A pia da cozinha vivia entupindo. Vieram rápido, usaram máquina e resolveram de vez. Atendimento muito atencioso.',
