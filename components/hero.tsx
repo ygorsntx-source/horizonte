@@ -8,7 +8,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-brand-navy text-white">
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-desentupimento.png"
+          src="/images/hero-desentupimento.webp"
           alt="Equipamentos profissionais de desentupimento e hidrojateamento (imagem ilustrativa)"
           fill
           priority
