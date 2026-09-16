@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className="bg-brand-ink py-10 pb-28 text-white/80 md:pb-10">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <img
-          src="/images/logo-horizonte.png"
+          src="/images/logo-horizonte.webp"
           alt={`Logo ${COMPANY_NAME}`}
           className="h-14 w-auto"
         />
