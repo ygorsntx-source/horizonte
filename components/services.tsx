@@ -7,7 +7,7 @@ const services = [
     title: 'Desentupimento de vaso sanitário',
     description:
       'Desentupimento de vasos sanitários em residências, empresas e condomínios.',
-    image: '/images/servico-vaso.png',
+    image: '/images/servico-vaso.webp',
     imageAlt:
       'Técnico da Horizonte desentupindo um vaso sanitário com equipamento profissional.',
   },
@@ -16,7 +16,7 @@ const services = [
     title: 'Desentupimento de pia',
     description:
       'Desobstrução de pias de cozinha, banheiro e áreas de serviço.',
-    image: '/images/servico-pia.png',
+    image: '/images/servico-pia.webp',
     imageAlt:
       'Dois técnicos da Horizonte desentupindo a pia de uma cozinha com máquina rotativa.',
   },
@@ -25,7 +25,7 @@ const services = [
     title: 'Desentupimento de ralo',
     description:
       'Desentupimento de ralos com dificuldade de escoamento ou acúmulo de resíduos.',
-    image: '/images/servico-ralo.png',
+    image: '/images/servico-ralo.webp',
     imageAlt:
       'Técnico da Horizonte desobstruindo um ralo com equipamento RIDGID.',
   },
@@ -34,7 +34,7 @@ const services = [
     title: 'Desentupimento de rede de esgoto',
     description:
       'Atendimento para obstruções em redes de esgoto e tubulações.',
-    image: '/images/servico-rede-esgoto.png',
+    image: '/images/servico-rede-esgoto.webp',
     imageAlt:
       'Equipe da Horizonte desentupindo uma rede de esgoto em poço de visita com caminhão a vácuo.',
   },
@@ -44,7 +44,7 @@ const services = [
     title: 'Hidrojateamento',
     description:
       'Limpeza e desobstrução de tubulações por hidrojateamento, conforme avaliação e disponibilidade.',
-    image: '/images/servico-hidrojateamento.png',
+    image: '/images/servico-hidrojateamento.webp',
     imageAlt:
       'Técnico da Horizonte realizando hidrojateamento de alta pressão em tubulação externa.',
   },
