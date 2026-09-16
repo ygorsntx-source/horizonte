@@ -8,7 +8,7 @@ export function SiteFooter() {
         <img
           src="/images/logo-horizonte.png"
           alt={`Logo ${COMPANY_NAME}`}
-          className="h-14 w-auto rounded-md bg-white p-2"
+          className="h-14 w-auto"
         />
         <p className="mt-4 max-w-md text-sm">
           Desentupimento 24 horas em Belo Horizonte e Região Metropolitana.
