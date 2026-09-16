@@ -8,7 +8,7 @@ export function SiteHeader() {
         <a href="#" className="flex items-center gap-2.5" aria-label={COMPANY_NAME}>
          <span className="flex items-center justify-center">
             <img
-              src="/images/logo-horizonte.png"
+              src="/images/logo-horizonte.webp"
               alt={`Logo ${COMPANY_NAME}`}
               className="h-11 w-auto md:h-14"
             />
