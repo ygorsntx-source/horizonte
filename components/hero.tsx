@@ -36,7 +36,7 @@ export function Hero() {
           </p>
 
           <p className="mt-3 text-base text-white/70 md:text-lg">
-            Vaso sanitário, pia, ralo, rede de esgoto, fossa e hidrojateamento.
+            Vaso sanitário, pia, ralo, rede de esgoto e hidrojateamento.
           </p>
 
           <a
