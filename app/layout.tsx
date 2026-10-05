@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     'desentupimento de esgoto',
     'hidrojateamento em BH',
   ],
+  icons: {
+    icon: '/images/favicon.webp',
+  },
 }
 
 export const viewport: Viewport = {
   themeColor: '#082b4c',
 }
-  icons: {
-    icon: '/images/favicon.webp',
-  },
 
 export default function RootLayout({
   children,
