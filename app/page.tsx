@@ -1,3 +1,4 @@
+import { AboutUs } from '@/components/about-us'
 import { SiteHeader } from '@/components/site-header'
 import { Hero } from '@/components/hero'
 import { TrustStrip } from '@/components/trust-strip'
@@ -21,6 +22,7 @@ export default function Page() {
         <Hero />
         <TrustStrip />
         <Services />
+        <AboutUs />
         <Problems />
         <HowItWorks />
         <ServiceArea />
