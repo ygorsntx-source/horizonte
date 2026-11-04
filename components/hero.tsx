@@ -20,7 +20,7 @@ export function Hero() {
           src="/images/hero-desentupimento.webp"
           alt="Equipe da Horizonte Desentupidora realizando serviço de desentupimento"
           fill
-          priority
+          preload
           sizes="100vw"
           className="object-cover opacity-30"
         />
