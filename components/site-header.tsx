@@ -1,3 +1,5 @@
+
+import Image from 'next/image'
 import { Phone, Clock } from 'lucide-react'
 import { PHONE_DISPLAY, PHONE_TEL, COMPANY_NAME } from '@/lib/site'
 
@@ -5,12 +7,20 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 bg-brand-navy text-white shadow-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
-        <a href="#" className="flex items-center gap-2.5" aria-label={COMPANY_NAME}>
-         <span className="flex items-center justify-center">
-            <img
+        <a
+          href="#"
+          className="flex items-center gap-2.5"
+          aria-label={COMPANY_NAME}
+        >
+          <span className="flex items-center justify-center">
+            <Image
               src="/images/logo-horizonte.webp"
               alt={`Logo ${COMPANY_NAME}`}
+              width={308}
+              height={154}
+              sizes="(max-width: 767px) 88px, 112px"
               className="h-11 w-auto md:h-14"
+              loading="eager"
             />
           </span>
         </a>
@@ -22,7 +32,10 @@ export function SiteHeader() {
           <a href="#servicos" className="transition-colors hover:text-white">
             Serviços
           </a>
-          <a href="#como-funciona" className="transition-colors hover:text-white">
+          <a
+            href="#como-funciona"
+            className="transition-colors hover:text-white"
+          >
             Como funciona
           </a>
           <a href="#areas" className="transition-colors hover:text-white">
@@ -39,6 +52,7 @@ export function SiteHeader() {
               <Clock className="size-3.5" aria-hidden="true" />
               Atendimento 24 horas
             </span>
+
             <a
               href={PHONE_TEL}
               className="text-base font-bold leading-tight text-white"
@@ -46,6 +60,7 @@ export function SiteHeader() {
               {PHONE_DISPLAY}
             </a>
           </div>
+
           <a
             href={PHONE_TEL}
             aria-label={`Ligar agora para ${COMPANY_NAME} ${PHONE_DISPLAY}`}
