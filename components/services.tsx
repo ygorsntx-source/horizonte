@@ -1,4 +1,6 @@
 
+import Image from 'next/image'
+
 import {
   Toilet,
   Droplets,
@@ -99,15 +101,17 @@ export function Services() {
               >
                 {image ? (
                   <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-navy">
-                    <img
+                    <Image
                       src={image}
                       alt={imageAlt}
-                      className="size-full object-cover"
+                      fill
+                      sizes="(max-width: 639px) calc(100vw - 2rem), (max-width: 1023px) calc(50vw - 2rem), 355px"
+                      className="object-cover"
                       loading="lazy"
-                      decoding="async"
+                      quality={75}
                     />
 
-                    <span className="absolute left-3 top-3 flex size-10 items-center justify-center rounded-md bg-brand-navy/90 text-brand-orange backdrop-blur-sm">
+                    <span className="absolute left-3 top-3 z-10 flex size-10 items-center justify-center rounded-md bg-brand-navy/90 text-brand-orange backdrop-blur-sm">
                       <Icon className="size-5" aria-hidden="true" />
                     </span>
                   </div>
