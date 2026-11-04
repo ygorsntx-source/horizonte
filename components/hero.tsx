@@ -20,7 +20,8 @@ export function Hero() {
           src="/images/hero-desentupimento.webp"
           alt="Equipe da Horizonte Desentupidora realizando serviço de desentupimento"
           fill
-          preload
+          loading="eager"
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover opacity-30"
         />
@@ -33,7 +34,6 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-20">
         <div className="max-w-2xl">
-
           <span className="inline-flex items-center gap-2 rounded-full bg-brand-orange/15 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-orange ring-1 ring-brand-orange/30">
             Desentupidora 24 horas em BH e Região
           </span>
@@ -66,7 +66,6 @@ export function Hero() {
           </div>
 
           <div className="mt-6 flex flex-col gap-3 text-sm text-white/80">
-
             <span className="flex items-center gap-2">
               <Clock3
                 className="size-4 shrink-0 text-brand-orange"
@@ -114,7 +113,6 @@ export function Hero() {
               />
               Atendimento em Belo Horizonte e Região Metropolitana.
             </span>
-
           </div>
         </div>
       </div>
