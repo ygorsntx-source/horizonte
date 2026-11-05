@@ -1,4 +1,6 @@
 
+'use client'
+
 import { Phone, MessageCircle } from 'lucide-react'
 import { PHONE_TEL, WHATSAPP_URL } from '@/lib/site'
 
