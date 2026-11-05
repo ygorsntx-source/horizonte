@@ -1,4 +1,6 @@
 
+'use client'
+
 import { WHATSAPP_URL } from '@/lib/site'
 
 export function WhatsAppFloat() {
