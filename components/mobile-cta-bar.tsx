@@ -1,5 +1,21 @@
+
 import { Phone, MessageCircle } from 'lucide-react'
 import { PHONE_TEL, WHATSAPP_URL } from '@/lib/site'
+
+function trackWhatsAppClick() {
+  const pixel = (
+    window as Window & {
+      oaiq?: (...args: unknown[]) => void
+    }
+  ).oaiq
+
+  pixel?.(
+    'measure',
+    'custom',
+    { type: 'custom' },
+    { custom_event_name: 'whatsapp_click' }
+  )
+}
 
 export function MobileCtaBar() {
   return (
@@ -12,10 +28,12 @@ export function MobileCtaBar() {
           <Phone className="size-5" aria-hidden="true" />
           LIGAR AGORA
         </a>
+
         <a
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={trackWhatsAppClick}
           className="flex flex-1 items-center justify-center gap-2 rounded-lg border-2 border-white/25 bg-white/10 px-4 py-3.5 text-sm font-bold tracking-wide text-white"
         >
           <MessageCircle className="size-5" aria-hidden="true" />
