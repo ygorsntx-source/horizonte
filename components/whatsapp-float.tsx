@@ -1,12 +1,29 @@
+
 import { WHATSAPP_URL } from '@/lib/site'
 
 export function WhatsAppFloat() {
+  function handleWhatsAppClick() {
+    const pixel = (
+      window as Window & {
+        oaiq?: (...args: unknown[]) => void
+      }
+    ).oaiq
+
+    pixel?.(
+      'measure',
+      'custom',
+      { type: 'custom' },
+      { custom_event_name: 'whatsapp_click' }
+    )
+  }
+
   return (
     <a
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
+      onClick={handleWhatsAppClick}
       className="fixed bottom-24 right-4 z-50 flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/25 transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/40 md:bottom-6 md:right-6 md:size-16"
     >
       <svg
