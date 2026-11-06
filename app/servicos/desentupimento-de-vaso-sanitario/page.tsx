@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   FileText,
   AlertCircle,
+  CheckCircle2,
 } from 'lucide-react'
 
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from '@/lib/site'
@@ -102,15 +103,25 @@ export default function DesentupimentoVasoSanitarioPage() {
       <SiteHeader />
 
       <main>
+        {/* HERO */}
         <section className="bg-brand-navy py-12 text-white md:py-20">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:px-6 lg:grid-cols-2">
             <div>
-              <nav aria-label="Breadcrumb" className="mb-6 text-sm text-white/60">
-                <a href="/" className="hover:text-white">Início</a>
+              <nav
+                aria-label="Breadcrumb"
+                className="mb-6 text-sm text-white/60"
+              >
+                <a href="/" className="hover:text-white">
+                  Início
+                </a>
                 <span className="mx-2">/</span>
-                <a href="/#servicos" className="hover:text-white">Serviços</a>
+                <a href="/#servicos" className="hover:text-white">
+                  Serviços
+                </a>
                 <span className="mx-2">/</span>
-                <span className="text-brand-orange">Vaso sanitário</span>
+                <span className="text-brand-orange">
+                  Vaso sanitário
+                </span>
               </nav>
 
               <span className="inline-flex rounded-full bg-brand-orange/15 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-orange ring-1 ring-brand-orange/30">
@@ -134,7 +145,7 @@ export default function DesentupimentoVasoSanitarioPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-4 text-sm font-bold text-white transition-opacity hover:opacity-90"
                 >
-                  <MessageCircle className="size-5" />
+                  <MessageCircle className="size-5" aria-hidden="true" />
                   SOLICITAR PELO WHATSAPP
                 </a>
 
@@ -142,13 +153,13 @@ export default function DesentupimentoVasoSanitarioPage() {
                   href={PHONE_TEL}
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-orange px-6 py-4 text-sm font-bold text-white transition-colors hover:bg-brand-orange-dark"
                 >
-                  <Phone className="size-5" />
+                  <Phone className="size-5" aria-hidden="true" />
                   LIGAR AGORA
                 </a>
               </div>
 
               <div className="mt-6 flex items-center gap-2 text-sm text-white/80">
-                <Clock3 className="size-5 text-brand-orange" />
+                <Clock3 className="size-5 text-brand-orange" aria-hidden="true" />
                 Visita técnica em até 30 minutos.
               </div>
             </div>
@@ -166,6 +177,7 @@ export default function DesentupimentoVasoSanitarioPage() {
           </div>
         </section>
 
+        {/* PROBLEMAS */}
         <section className="bg-white py-14 md:py-20">
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <h2 className="text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
@@ -184,7 +196,11 @@ export default function DesentupimentoVasoSanitarioPage() {
                   key={problem}
                   className="flex items-start gap-3 rounded-xl border border-black/8 bg-brand-gray p-5"
                 >
-                  <AlertCircle className="mt-0.5 size-5 shrink-0 text-brand-orange" />
+                  <AlertCircle
+                    className="mt-0.5 size-5 shrink-0 text-brand-orange"
+                    aria-hidden="true"
+                  />
+
                   <p className="text-sm font-medium leading-relaxed text-brand-ink">
                     {problem}
                   </p>
@@ -200,6 +216,7 @@ export default function DesentupimentoVasoSanitarioPage() {
           </div>
         </section>
 
+        {/* COMO FUNCIONA */}
         <section className="bg-brand-gray py-14 md:py-20">
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <h2 className="text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
@@ -237,9 +254,11 @@ export default function DesentupimentoVasoSanitarioPage() {
                   <span className="text-3xl font-extrabold text-brand-orange">
                     {step.number}
                   </span>
+
                   <h3 className="mt-4 text-lg font-bold text-brand-ink">
                     {step.title}
                   </h3>
+
                   <p className="mt-2 text-sm leading-relaxed text-brand-ink/70">
                     {step.text}
                   </p>
@@ -249,6 +268,7 @@ export default function DesentupimentoVasoSanitarioPage() {
           </div>
         </section>
 
+        {/* DIFERENCIAIS */}
         <section className="bg-white py-14 md:py-20">
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <h2 className="text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
@@ -261,10 +281,12 @@ export default function DesentupimentoVasoSanitarioPage() {
                   key={title}
                   className="rounded-xl border border-black/8 bg-brand-gray p-6"
                 >
-                  <Icon className="size-8 text-brand-orange" />
+                  <Icon className="size-8 text-brand-orange" aria-hidden="true" />
+
                   <h3 className="mt-4 text-lg font-bold text-brand-ink">
                     {title}
                   </h3>
+
                   <p className="mt-2 text-sm leading-relaxed text-brand-ink/70">
                     {description}
                   </p>
@@ -274,6 +296,7 @@ export default function DesentupimentoVasoSanitarioPage() {
           </div>
         </section>
 
+        {/* REGIÕES ATENDIDAS */}
         <section className="bg-brand-navy py-14 text-white md:py-16">
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <h2 className="text-3xl font-extrabold md:text-4xl">
@@ -295,6 +318,7 @@ export default function DesentupimentoVasoSanitarioPage() {
           </div>
         </section>
 
+        {/* FAQ */}
         <section className="bg-white py-14 md:py-20">
           <div className="mx-auto max-w-3xl px-4 md:px-6">
             <h2 className="text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
@@ -306,10 +330,12 @@ export default function DesentupimentoVasoSanitarioPage() {
                 <details key={faq.question} className="group py-5">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-brand-ink">
                     {faq.question}
+
                     <span className="text-xl text-brand-orange transition-transform group-open:rotate-45">
                       +
                     </span>
                   </summary>
+
                   <p className="mt-3 text-sm leading-relaxed text-brand-ink/70">
                     {faq.answer}
                   </p>
@@ -319,6 +345,7 @@ export default function DesentupimentoVasoSanitarioPage() {
           </div>
         </section>
 
+        {/* CTA FINAL */}
         <section className="bg-brand-gray py-14 md:py-20">
           <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
             <h2 className="text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
@@ -337,7 +364,7 @@ export default function DesentupimentoVasoSanitarioPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-7 py-4 text-sm font-bold text-white"
               >
-                <MessageCircle className="size-5" />
+                <MessageCircle className="size-5" aria-hidden="true" />
                 FALAR PELO WHATSAPP
               </a>
 
@@ -345,13 +372,16 @@ export default function DesentupimentoVasoSanitarioPage() {
                 href={PHONE_TEL}
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-orange px-7 py-4 text-sm font-bold text-white"
               >
-                <Phone className="size-5" />
+                <Phone className="size-5" aria-hidden="true" />
                 {PHONE_DISPLAY}
               </a>
             </div>
 
             <div className="mt-5 flex items-center justify-center gap-2 text-sm text-brand-ink/60">
-              <CheckCircle2 className="size-4 text-brand-orange" />
+              <CheckCircle2
+                className="size-4 text-brand-orange"
+                aria-hidden="true"
+              />
               Orçamento apresentado antes da execução.
             </div>
           </div>
