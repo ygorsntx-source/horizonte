@@ -12,21 +12,27 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Horizonte Desentupidora | Desentupimento 24 horas em BH e Região',
+  metadataBase: new URL('https://horizonte24h.com.br'),
+
+  title: {
+    default:
+      'Horizonte Desentupidora | Desentupimento 24 horas em BH e Região',
+    template: '%s | Horizonte Desentupidora',
+  },
+
   description:
-    'Desentupimento 24 horas em Belo Horizonte e Região Metropolitana. Atendimento para vasos, pias, ralos, redes de esgoto, fossas e hidrojateamento. Ligue agora.',
-  generator: 'v0.app',
-  keywords: [
-    'desentupidora em Belo Horizonte',
-    'desentupimento 24 horas em BH',
-    'desentupidora em Contagem',
-    'desentupidora em Betim',
-    'desentupimento de vaso sanitário',
-    'desentupimento de pia',
-    'desentupimento de ralo',
-    'desentupimento de esgoto',
-    'hidrojateamento em BH',
-  ],
+    'Desentupidora 24 horas em Belo Horizonte e Região Metropolitana. Desentupimento de vasos sanitários, pias, ralos, redes de esgoto, caixas de gordura e hidrojateamento. Orçamento antes da execução.',
+
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    siteName: 'Horizonte Desentupidora',
+    title:
+      'Horizonte Desentupidora | Desentupimento 24 horas em BH e Região',
+    description:
+      'Desentupidora 24 horas em Belo Horizonte e Região Metropolitana. Atendimento para residências, empresas e condomínios.',
+  },
+
   icons: {
     icon: '/images/favicon.webp',
   },
