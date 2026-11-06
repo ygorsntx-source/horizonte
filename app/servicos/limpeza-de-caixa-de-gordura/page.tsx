@@ -1,4 +1,5 @@
 
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import {
   Phone,
@@ -17,6 +18,8 @@ import {
   Container,
   Droplets,
   Utensils,
+  Home,
+  Store,
 } from 'lucide-react'
 
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from '@/lib/site'
@@ -28,85 +31,86 @@ import { WhatsAppFloat } from '@/components/whatsapp-float'
 const pagePath = '/servicos/limpeza-de-caixa-de-gordura'
 
 const whatsappLink = `${WHATSAPP_URL}?text=${encodeURIComponent(
-  'Olá! Gostaria de solicitar um orçamento para limpeza e desentupimento de caixa de gordura com a Horizonte Desentupidora.',
+  'Olá! Preciso de limpeza de caixa de gordura e gostaria de solicitar uma visita técnica gratuita com a Horizonte Desentupidora.',
 )}`
 
 export const metadata: Metadata = {
-  title: 'Limpeza de Caixa de Gordura em BH | Horizonte 24h',
+  title: 'Limpeza de Caixa de Gordura em BH | Horizonte Desentupidora',
   description:
-    'Caixa de gordura cheia ou entupida em Belo Horizonte? Limpeza residencial e comercial, visita técnica gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
+    'Precisa limpar uma caixa de gordura em Belo Horizonte? Atendimento residencial e comercial 24h, visita gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
   alternates: {
     canonical: pagePath,
   },
   openGraph: {
     title: 'Limpeza de Caixa de Gordura em BH | Horizonte Desentupidora',
     description:
-      'Limpeza e desentupimento de caixas de gordura em Belo Horizonte e Região Metropolitana. Atendimento 24 horas, visita gratuita e orçamento sem compromisso.',
+      'Limpeza de caixas de gordura em casas, apartamentos, restaurantes e empresas em BH e Região Metropolitana. Solicite atendimento pelo WhatsApp.',
     url: pagePath,
     type: 'website',
+    images: ['/images/servico-caixa-gordura.webp'],
   },
 }
 
 const problems = [
-  'A caixa de gordura está cheia ou com acúmulo excessivo de resíduos.',
-  'A pia da cozinha apresenta dificuldade de escoamento.',
-  'Existe mau cheiro próximo à caixa de gordura.',
-  'A água retorna pelo ralo ou pela pia da cozinha.',
-  'A gordura acumulada está dificultando a passagem da água.',
-  'O imóvel apresenta entupimentos frequentes na tubulação da cozinha.',
+  'A caixa de gordura está cheia e precisa de limpeza.',
+  'Existe mau cheiro próximo à pia ou à caixa de gordura.',
+  'A água da pia da cozinha está demorando para escoar.',
+  'Há gordura acumulada na superfície ou no interior da caixa.',
+  'A água apresenta dificuldade para passar pela tubulação.',
+  'O problema de entupimento na cozinha acontece repetidamente.',
 ]
 
 const causes = [
   {
-    title: 'Descarte de óleo e gordura',
+    title: 'Acúmulo de óleo e gordura',
     description:
-      'O óleo de cozinha e a gordura despejados na pia podem se acumular no sistema e contribuir para a obstrução das tubulações.',
+      'O óleo e a gordura descartados na pia se acumulam no sistema de retenção e podem formar camadas que dificultam a passagem da água.',
   },
   {
     title: 'Restos de alimentos',
     description:
-      'Pequenos resíduos de alimentos podem chegar à caixa de gordura e se acumular junto aos materiais retidos.',
+      'Pequenos resíduos de alimentos que chegam à caixa podem se juntar à gordura acumulada e aumentar o volume de material retido.',
   },
   {
     title: 'Falta de limpeza periódica',
     description:
-      'Quando a caixa não recebe limpeza adequada, o acúmulo de gordura pode comprometer sua capacidade de retenção.',
+      'Quando os resíduos não são removidos regularmente, a caixa pode perder capacidade de retenção e apresentar problemas de funcionamento.',
   },
   {
-    title: 'Volume elevado de utilização',
+    title: 'Uso intenso da cozinha',
     description:
-      'Cozinhas comerciais, restaurantes e estabelecimentos com grande movimentação podem acumular resíduos em maior quantidade.',
+      'Restaurantes, lanchonetes e cozinhas comerciais podem gerar grandes volumes de gordura, exigindo atenção especial à manutenção.',
   },
   {
     title: 'Obstrução na tubulação',
     description:
-      'O acúmulo de gordura pode avançar para trechos do encanamento e dificultar o escoamento da água.',
+      'A gordura também pode se acumular nos trechos de encanamento conectados à caixa, provocando dificuldade de escoamento.',
   },
   {
-    title: 'Problemas de funcionamento',
+    title: 'Problemas na estrutura da caixa',
     description:
-      'Caixas mal conservadas ou com problemas estruturais podem prejudicar a separação e a retenção dos resíduos.',
+      'Tampas danificadas, acesso inadequado ou problemas na instalação podem dificultar a manutenção e prejudicar o funcionamento do sistema.',
   },
 ]
 
 const methods = [
   {
     icon: ClipboardCheck,
-    title: 'Avaliação da caixa de gordura',
+    title: 'Avaliação da caixa',
     description:
-      'A equipe verifica as condições de acesso, o nível de resíduos acumulados e possíveis sinais de obstrução no sistema.',
+      'Verificamos as condições de acesso, o nível de resíduos acumulados e a situação geral da caixa de gordura.',
   },
   {
     icon: Container,
-    title: 'Remoção da gordura acumulada',
+    title: 'Retirada dos resíduos',
     description:
-      'O serviço envolve a retirada dos resíduos acumulados na caixa, conforme suas características, condições de acesso e necessidade identificada.',
+      'Realizamos a remoção da gordura e dos materiais retidos no interior da caixa, conforme as condições encontradas no local.',
   },
   {
     icon: Droplets,
-    title: 'Limpeza e verificação do escoamento',
+    title: 'Limpeza e verificação',
     description:
-      'Após a remoção dos resíduos, são avaliadas as condições de limpeza e passagem da água para identificar possíveis dificuldades de escoamento.',
+      'Após a remoção dos resíduos, verificamos as condições da caixa e do escoamento para identificar possíveis problemas adicionais.',
   },
 ]
 
@@ -115,37 +119,37 @@ const benefits = [
     icon: Clock3,
     title: 'Atendimento 24 horas',
     description:
-      'Atendimento para serviços de desentupimento e limpeza durante o dia, à noite, fins de semana e feriados.',
+      'Atendimento para limpeza e desentupimento durante o dia, à noite, fins de semana e feriados.',
   },
   {
     icon: MapPin,
     title: 'Visita técnica em até 30 minutos',
     description:
-      'Agilidade na avaliação presencial do problema para identificar a solução adequada.',
+      'Agilidade para avaliar presencialmente o problema e orientar sobre o serviço necessário.',
   },
   {
     icon: Handshake,
     title: 'Visita gratuita e orçamento sem compromisso',
     description:
-      'Você recebe a avaliação e conhece o orçamento antes de decidir pela contratação.',
+      'Você recebe a avaliação e o orçamento antes de decidir pela contratação.',
   },
   {
     icon: ShieldCheck,
-    title: 'Garantia dos serviços',
+    title: 'Serviços com garantia',
     description:
-      'Serviços com garantia, respeitando as condições aplicáveis e os direitos previstos no Código de Defesa do Consumidor.',
+      'Garantia dos serviços prestados, respeitando as condições aplicáveis e os direitos do consumidor.',
   },
   {
     icon: FileText,
     title: 'Emissão de nota fiscal',
     description:
-      'Nota fiscal pelos serviços prestados, com transparência e formalização da contratação.',
+      'Nota fiscal pelos serviços realizados, com transparência na contratação.',
   },
   {
     icon: Building2,
     title: 'Atendimento residencial e comercial',
     description:
-      'Atendemos residências, restaurantes, cozinhas comerciais, empresas e condomínios.',
+      'Serviços para casas, apartamentos, restaurantes, cozinhas comerciais, empresas e condomínios.',
   },
 ]
 
@@ -156,24 +160,34 @@ const faqs = [
       'Sim. A Horizonte Desentupidora oferece atendimento 24 horas para limpeza e desentupimento de caixas de gordura em Belo Horizonte e Região Metropolitana.',
   },
   {
-    question: 'Vocês realizam limpeza de caixa de gordura residencial?',
+    question: 'Vocês fazem limpeza de caixa de gordura residencial?',
     answer:
-      'Sim. Atendemos caixas de gordura de residências, casas e apartamentos, conforme as condições de acesso e a necessidade do serviço.',
+      'Sim. Atendemos casas e apartamentos que precisam de limpeza ou desentupimento de caixa de gordura.',
   },
   {
-    question: 'A Horizonte atende restaurantes e estabelecimentos comerciais?',
+    question: 'A Horizonte atende restaurantes e cozinhas comerciais?',
     answer:
-      'Sim. Realizamos atendimento para restaurantes, cozinhas comerciais, empresas e condomínios.',
+      'Sim. Realizamos atendimento para restaurantes, lanchonetes, cozinhas comerciais, empresas e condomínios.',
   },
   {
-    question: 'Quais são os sinais de que a caixa de gordura precisa de limpeza?',
+    question: 'Como saber se a caixa de gordura está cheia?',
     answer:
-      'Mau cheiro, acúmulo excessivo de resíduos, dificuldade de escoamento e retorno de água podem indicar a necessidade de avaliação e limpeza.',
+      'Acúmulo visível de resíduos, mau cheiro, dificuldade de escoamento e entupimentos recorrentes podem indicar que a caixa precisa de avaliação e limpeza.',
   },
   {
-    question: 'Com que frequência devo limpar a caixa de gordura?',
+    question: 'Com que frequência a caixa de gordura deve ser limpa?',
     answer:
-      'A frequência depende do tamanho da caixa, do volume de utilização e da quantidade de gordura gerada. Cozinhas com uso intenso podem exigir limpezas mais frequentes. Uma avaliação ajuda a identificar a necessidade.',
+      'A frequência depende do tamanho da caixa e do volume de utilização. Cozinhas comerciais com uso intenso podem precisar de manutenção mais frequente. O acompanhamento do acúmulo ajuda a identificar o momento adequado.',
+  },
+  {
+    question: 'O que acontece se eu não limpar a caixa de gordura?',
+    answer:
+      'O acúmulo excessivo de gordura e resíduos pode reduzir a capacidade de retenção, provocar mau cheiro e contribuir para obstruções e dificuldades de escoamento.',
+  },
+  {
+    question: 'A visita técnica para limpeza é gratuita?',
+    answer:
+      'Sim. A visita técnica presencial para avaliação do problema é gratuita.',
   },
   {
     question: 'Em quanto tempo a equipe chega?',
@@ -181,24 +195,19 @@ const faqs = [
       'Nossa visita técnica é realizada em até 30 minutos. Entre em contato pelo telefone ou WhatsApp para solicitar atendimento.',
   },
   {
-    question: 'A visita técnica é gratuita?',
-    answer:
-      'Sim. A visita técnica presencial para avaliação do problema é gratuita.',
-  },
-  {
     question: 'O orçamento é apresentado antes da limpeza?',
     answer:
-      'Sim. Após avaliar o problema, apresentamos o orçamento antes de iniciar qualquer serviço. A execução somente começa após sua aprovação.',
+      'Sim. Após avaliar o local e a necessidade do serviço, apresentamos o orçamento antes da execução. O trabalho só começa após sua aprovação.',
   },
   {
     question: 'O orçamento é sem compromisso?',
     answer:
-      'Sim. Você pode analisar as condições apresentadas e decidir se deseja contratar o serviço.',
+      'Sim. Você pode analisar o orçamento e decidir se deseja contratar o serviço.',
   },
   {
     question: 'O serviço possui garantia?',
     answer:
-      'Sim. Os serviços possuem garantia, de acordo com as condições aplicáveis ao atendimento e os direitos previstos no Código de Defesa do Consumidor.',
+      'Sim. Os serviços possuem garantia, respeitando as condições aplicáveis ao atendimento e os direitos previstos no Código de Defesa do Consumidor.',
   },
   {
     question: 'A Horizonte emite nota fiscal?',
@@ -244,14 +253,14 @@ export default function LimpezaCaixaGorduraPage() {
               </span>
 
               <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
-                Caixa de gordura cheia ou entupida? Chame a Horizonte!
+                Limpeza de caixa de gordura em BH: atendimento residencial e comercial
               </h1>
 
               <p className="mt-5 text-base leading-relaxed text-white/80 md:text-lg">
-                Precisa de limpeza de caixa de gordura em Belo Horizonte?
-                Atendemos residências, restaurantes, cozinhas comerciais
-                e condomínios, com avaliação presencial e orçamento
-                antes da execução.
+                Caixa de gordura cheia, mau cheiro ou dificuldade de
+                escoamento? A Horizonte realiza limpeza e desentupimento
+                de caixas de gordura em casas, apartamentos, restaurantes,
+                cozinhas comerciais e condomínios.
               </p>
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -292,25 +301,15 @@ export default function LimpezaCaixaGorduraPage() {
               </div>
             </div>
 
-            {/* ESPAÇO VISUAL RESERVADO PARA FOTOGRAFIA REAL */}
-            <div className="relative flex aspect-[4/3] flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-brand-blue to-brand-navy p-8 text-center">
-              <span className="flex size-24 items-center justify-center rounded-2xl bg-white/10 text-brand-orange">
-                <Container className="size-14" aria-hidden="true" />
-              </span>
-
-              <h2 className="mt-6 text-2xl font-extrabold">
-                Limpeza de caixa de gordura
-              </h2>
-
-              <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/75">
-                Atendimento residencial, comercial e para cozinhas
-                profissionais em Belo Horizonte e região.
-              </p>
-
-              <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-orange/15 px-4 py-2 text-xs font-bold text-brand-orange">
-                <CheckCircle2 className="size-4" />
-                Avaliação técnica e orçamento
-              </span>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
+              <Image
+                src="/images/servico-caixa-gordura.webp"
+                alt="Técnico da Horizonte realizando limpeza de caixa de gordura"
+                fill
+                preload
+                sizes="(max-width: 1023px) 100vw, 50vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
@@ -348,8 +347,74 @@ export default function LimpezaCaixaGorduraPage() {
           </div>
         </section>
 
-        {/* SINTOMAS */}
+        {/* QUEM PRECISA DO SERVIÇO */}
         <section className="bg-white py-14 md:py-20">
+          <div className="mx-auto max-w-6xl px-4 md:px-6">
+            <div className="max-w-3xl">
+              <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
+                Limpeza residencial e comercial
+              </span>
+
+              <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
+                Limpeza de caixa de gordura para diferentes tipos de imóvel
+              </h2>
+
+              <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
+                A caixa de gordura precisa de manutenção para continuar
+                funcionando corretamente. O volume de resíduos varia
+                conforme a utilização da cozinha e as características
+                de cada instalação.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              <article className="rounded-xl border border-black/8 bg-brand-gray p-6">
+                <Home className="size-9 text-brand-orange" aria-hidden="true" />
+
+                <h3 className="mt-4 text-xl font-bold text-brand-ink">
+                  Casas e apartamentos
+                </h3>
+
+                <p className="mt-3 text-sm leading-relaxed text-brand-ink/70">
+                  Limpeza de caixas de gordura residenciais, com atenção
+                  ao acúmulo de resíduos, mau cheiro e dificuldades
+                  de escoamento na cozinha.
+                </p>
+              </article>
+
+              <article className="rounded-xl border border-black/8 bg-brand-gray p-6">
+                <Utensils className="size-9 text-brand-orange" aria-hidden="true" />
+
+                <h3 className="mt-4 text-xl font-bold text-brand-ink">
+                  Restaurantes e cozinhas
+                </h3>
+
+                <p className="mt-3 text-sm leading-relaxed text-brand-ink/70">
+                  Atendimento para cozinhas profissionais, lanchonetes
+                  e estabelecimentos que lidam diariamente com maior
+                  volume de gordura e resíduos.
+                </p>
+              </article>
+
+              <article className="rounded-xl border border-black/8 bg-brand-gray p-6">
+                <Store className="size-9 text-brand-orange" aria-hidden="true" />
+
+                <h3 className="mt-4 text-xl font-bold text-brand-ink">
+                  Empresas e condomínios
+                </h3>
+
+                <p className="mt-3 text-sm leading-relaxed text-brand-ink/70">
+                  Atendimento para imóveis comerciais e condomínios
+                  que precisam manter suas instalações em boas
+                  condições de funcionamento.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* SINTOMAS */}
+        <section className="bg-brand-gray py-14 md:py-20">
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <div className="max-w-3xl">
               <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
@@ -357,14 +422,13 @@ export default function LimpezaCaixaGorduraPage() {
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-                Quando procurar limpeza de caixa de gordura?
+                Como saber se a caixa de gordura precisa de limpeza?
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
-                O acúmulo de gordura pode comprometer o funcionamento
-                da caixa e dificultar a passagem da água pela tubulação.
-                Fique atento aos sinais de que o sistema precisa
-                de avaliação e limpeza.
+                Nem sempre o problema aparece de uma vez. Alguns sinais
+                indicam que os resíduos estão se acumulando e que chegou
+                o momento de avaliar a necessidade de limpeza.
               </p>
             </div>
 
@@ -372,7 +436,7 @@ export default function LimpezaCaixaGorduraPage() {
               {problems.map((problem) => (
                 <div
                   key={problem}
-                  className="flex items-start gap-3 rounded-xl border border-black/8 bg-brand-gray p-5"
+                  className="flex items-start gap-3 rounded-xl border border-black/5 bg-white p-5"
                 >
                   <AlertCircle
                     className="mt-0.5 size-5 shrink-0 text-brand-orange"
@@ -385,26 +449,40 @@ export default function LimpezaCaixaGorduraPage() {
                 </div>
               ))}
             </div>
+
+            <div className="mt-8 rounded-xl border border-brand-orange/20 bg-white p-6">
+              <h3 className="text-lg font-bold text-brand-ink">
+                Não espere a caixa transbordar para procurar atendimento
+              </h3>
+
+              <p className="mt-3 text-sm leading-relaxed text-brand-ink/70">
+                Quando há acúmulo excessivo, podem surgir mau cheiro,
+                retorno de água e dificuldades de escoamento. A avaliação
+                e a limpeza no momento adequado ajudam a evitar que
+                o problema se agrave.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* CAUSAS */}
-        <section className="bg-brand-gray py-14 md:py-20">
+        <section className="bg-white py-14 md:py-20">
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <div className="max-w-3xl">
               <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
-                Entenda as causas
+                Entenda o funcionamento
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-                O que provoca o acúmulo de gordura na caixa?
+                Por que a caixa de gordura acumula resíduos?
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
-                A caixa de gordura tem a função de reter parte da gordura
-                e dos resíduos presentes na água proveniente das pias
-                e cozinhas. Com o uso contínuo, os materiais retidos
-                se acumulam e precisam ser removidos.
+                A caixa de gordura retém parte da gordura presente
+                na água que vem da pia e da cozinha, evitando que
+                todo esse material siga diretamente para a tubulação.
+                Com o uso, os resíduos retidos se acumulam e precisam
+                ser removidos.
               </p>
             </div>
 
@@ -412,7 +490,7 @@ export default function LimpezaCaixaGorduraPage() {
               {causes.map((cause) => (
                 <article
                   key={cause.title}
-                  className="rounded-xl border border-black/5 bg-white p-6"
+                  className="rounded-xl border border-black/8 bg-brand-gray p-6"
                 >
                   <h3 className="text-lg font-bold text-brand-ink">
                     {cause.title}
@@ -425,23 +503,24 @@ export default function LimpezaCaixaGorduraPage() {
               ))}
             </div>
 
-            <div className="mt-8 rounded-xl border border-brand-orange/20 bg-white p-6">
-              <h3 className="text-lg font-bold text-brand-ink">
-                Por que evitar o descarte de óleo na pia?
+            <div className="mt-8 rounded-xl bg-brand-navy p-6 text-white md:p-8">
+              <h3 className="text-xl font-bold">
+                Um cuidado simples que faz diferença
               </h3>
 
-              <p className="mt-3 text-sm leading-relaxed text-brand-ink/70">
-                O óleo e a gordura descartados na pia podem se solidificar
-                ou aderir às paredes internas da tubulação, favorecendo
-                obstruções. O ideal é armazenar o óleo usado em recipiente
-                adequado e encaminhá-lo para descarte apropriado.
+              <p className="mt-3 text-sm leading-relaxed text-white/75">
+                Evite despejar óleo de cozinha diretamente na pia.
+                Armazene o óleo usado em recipiente adequado para
+                descarte e retire restos de alimentos dos utensílios
+                antes de lavá-los. Esses cuidados ajudam a reduzir
+                a quantidade de resíduos encaminhados à caixa.
               </p>
             </div>
           </div>
         </section>
 
-        {/* LIMPEZA E PROCEDIMENTOS */}
-        <section className="bg-white py-14 md:py-20">
+        {/* COMO É FEITA A LIMPEZA */}
+        <section className="bg-brand-gray py-14 md:py-20">
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <div className="max-w-3xl">
               <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
@@ -449,40 +528,21 @@ export default function LimpezaCaixaGorduraPage() {
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-                Como funciona a limpeza de uma caixa de gordura?
+                Como funciona a limpeza de caixa de gordura?
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
-                O serviço começa pela avaliação da caixa e das condições
-                de acesso. A partir da quantidade de resíduos e da situação
-                encontrada, a equipe define como realizar a limpeza.
+                O serviço começa pela avaliação do local e das condições
+                de acesso à caixa. A equipe verifica o acúmulo de resíduos
+                e define o procedimento adequado para realizar a limpeza.
               </p>
             </div>
 
             <div className="mt-8 grid gap-5 md:grid-cols-3">
-              {[
-                {
-                  icon: ClipboardCheck,
-                  title: 'Avaliação do local',
-                  description:
-                    'Verificamos as condições da caixa, o acesso e o nível de resíduos acumulados.',
-                },
-                {
-                  icon: Wrench,
-                  title: 'Remoção dos resíduos',
-                  description:
-                    'Realizamos a retirada da gordura e dos materiais acumulados, conforme a necessidade identificada.',
-                },
-                {
-                  icon: Droplets,
-                  title: 'Limpeza e verificação',
-                  description:
-                    'Avaliamos a limpeza da caixa e as condições de escoamento do sistema após o procedimento.',
-                },
-              ].map(({ icon: Icon, title, description }) => (
+              {methods.map(({ icon: Icon, title, description }) => (
                 <article
                   key={title}
-                  className="rounded-xl border border-black/8 bg-brand-gray p-6"
+                  className="rounded-xl border border-black/5 bg-white p-6"
                 >
                   <span className="flex size-12 items-center justify-center rounded-lg bg-brand-orange/10 text-brand-orange">
                     <Icon className="size-6" aria-hidden="true" />
@@ -500,39 +560,34 @@ export default function LimpezaCaixaGorduraPage() {
             </div>
 
             <div className="mt-8 grid gap-6 md:grid-cols-2 md:items-center">
-              <div className="rounded-xl bg-brand-navy p-8 text-white">
-                <span className="flex size-14 items-center justify-center rounded-xl bg-brand-orange/15 text-brand-orange">
-                  <Utensils className="size-8" aria-hidden="true" />
-                </span>
-
-                <h3 className="mt-5 text-2xl font-extrabold">
-                  Atendimento para cozinhas comerciais
-                </h3>
-
-                <p className="mt-4 text-sm leading-relaxed text-white/75">
-                  Restaurantes e cozinhas profissionais podem gerar
-                  grandes volumes de gordura e resíduos. A limpeza
-                  adequada da caixa ajuda a manter o funcionamento
-                  das instalações e reduzir problemas de escoamento.
-                </p>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                <Image
+                  src="/images/servico-caixa-gordura.webp"
+                  alt="Serviço de limpeza de caixa de gordura realizado pela equipe da Horizonte"
+                  fill
+                  sizes="(max-width: 767px) 100vw, 50vw"
+                  loading="lazy"
+                  className="object-cover"
+                />
               </div>
 
               <div>
                 <h3 className="text-2xl font-extrabold text-brand-ink">
-                  Limpeza residencial e comercial
+                  Limpeza adequada para cada instalação
                 </h3>
 
                 <p className="mt-4 text-base leading-relaxed text-brand-ink/70">
-                  Cada imóvel possui uma estrutura e uma demanda
-                  diferentes. Por isso, a avaliação considera o tamanho
-                  da caixa, as condições de acesso, a quantidade
-                  de resíduos e a necessidade do atendimento.
+                  O procedimento depende do tamanho da caixa,
+                  da quantidade de gordura acumulada e das condições
+                  de acesso. Por isso, a avaliação presencial é
+                  importante para definir o serviço necessário.
                 </p>
 
                 <p className="mt-4 text-sm leading-relaxed text-brand-ink/70">
-                  A Horizonte atende residências, apartamentos,
-                  restaurantes, empresas e condomínios em Belo
-                  Horizonte e região.
+                  Caso também exista uma obstrução na tubulação
+                  conectada à caixa, a equipe poderá avaliar
+                  a necessidade de um procedimento adicional
+                  e apresentar as condições antes da execução.
                 </p>
               </div>
             </div>
@@ -540,33 +595,40 @@ export default function LimpezaCaixaGorduraPage() {
         </section>
 
         {/* PREVENÇÃO */}
-        <section className="bg-brand-gray py-14 md:py-20">
+        <section className="bg-white py-14 md:py-20">
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
               Cuidados preventivos
             </span>
 
             <h2 className="mt-3 max-w-3xl text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-              Como prevenir problemas na caixa de gordura?
+              Como evitar problemas na caixa de gordura?
             </h2>
+
+            <p className="mt-4 max-w-3xl leading-relaxed text-brand-ink/70 md:text-lg">
+              Alguns cuidados na rotina da cozinha ajudam a reduzir
+              o acúmulo de resíduos e a prevenir dificuldades
+              de escoamento.
+            </p>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               {[
-                'Evite despejar óleo e gordura diretamente na pia.',
-                'Retire restos de alimentos antes de lavar utensílios.',
-                'Acompanhe o nível de acúmulo de resíduos na caixa.',
-                'Realize limpezas conforme o volume de utilização do imóvel.',
-                'Observe sinais de mau cheiro e dificuldade de escoamento.',
-                'Procure avaliação profissional quando houver obstruções recorrentes.',
+                'Não despeje óleo de cozinha diretamente na pia.',
+                'Retire restos de alimentos dos pratos antes de lavá-los.',
+                'Observe o nível de resíduos acumulados na caixa.',
+                'Faça a limpeza de acordo com o volume de utilização.',
+                'Fique atento a sinais de mau cheiro e escoamento lento.',
+                'Procure avaliação profissional quando o problema se repetir.',
               ].map((tip) => (
                 <div
                   key={tip}
-                  className="flex items-start gap-3 rounded-xl border border-black/5 bg-white p-5"
+                  className="flex items-start gap-3 rounded-xl border border-black/5 bg-brand-gray p-5"
                 >
                   <CheckCircle2
                     className="mt-0.5 size-5 shrink-0 text-brand-orange"
                     aria-hidden="true"
                   />
+
                   <p className="text-sm font-medium leading-relaxed text-brand-ink">
                     {tip}
                   </p>
@@ -577,7 +639,7 @@ export default function LimpezaCaixaGorduraPage() {
         </section>
 
         {/* PROCESSO DE ATENDIMENTO */}
-        <section className="bg-white py-14 md:py-20">
+        <section className="bg-brand-gray py-14 md:py-20">
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <div className="max-w-3xl">
               <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
@@ -589,9 +651,10 @@ export default function LimpezaCaixaGorduraPage() {
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
-                Do primeiro contato até a conclusão do serviço,
-                você recebe orientação e conhece as condições
-                da contratação antes da execução.
+                Você sabe o que será feito e quanto vai custar
+                antes de autorizar o serviço. Nosso atendimento
+                é organizado para oferecer clareza desde
+                o primeiro contato.
               </p>
             </div>
 
@@ -600,7 +663,7 @@ export default function LimpezaCaixaGorduraPage() {
                 {
                   number: '01',
                   title: 'Entre em contato',
-                  text: 'Ligue ou envie uma mensagem pelo WhatsApp e informe o problema na caixa de gordura.',
+                  text: 'Ligue ou envie uma mensagem pelo WhatsApp e informe o tipo de imóvel e o problema.',
                 },
                 {
                   number: '02',
@@ -610,17 +673,17 @@ export default function LimpezaCaixaGorduraPage() {
                 {
                   number: '03',
                   title: 'Orçamento sem compromisso',
-                  text: 'Você recebe as informações e o orçamento antes da execução.',
+                  text: 'Você recebe o orçamento e conhece as condições do serviço antes de contratar.',
                 },
                 {
                   number: '04',
-                  title: 'Serviço após aprovação',
-                  text: 'Com sua autorização, realizamos o serviço com garantia e nota fiscal.',
+                  title: 'Execução após aprovação',
+                  text: 'Com sua autorização, realizamos a limpeza com garantia e emissão de nota fiscal.',
                 },
               ].map((step) => (
                 <article
                   key={step.number}
-                  className="rounded-xl border border-black/5 bg-brand-gray p-6"
+                  className="rounded-xl border border-black/5 bg-white p-6"
                 >
                   <span className="text-3xl font-extrabold text-brand-orange">
                     {step.number}
@@ -638,8 +701,7 @@ export default function LimpezaCaixaGorduraPage() {
             </div>
 
             <p className="mt-7 font-semibold text-brand-ink">
-              Você conhece o orçamento antes de contratar. O serviço só
-              começa depois da sua aprovação.
+              Nenhum serviço é iniciado sem a sua aprovação do orçamento.
             </p>
           </div>
         </section>
@@ -653,14 +715,14 @@ export default function LimpezaCaixaGorduraPage() {
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-                Uma desentupidora comprometida com seu atendimento
+                Sua caixa de gordura merece um atendimento profissional
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
-                Fundada em 2023, a Horizonte Desentupidora trabalha
-                para oferecer atendimento ágil, transparência na
-                contratação e soluções adequadas para limpeza
-                de caixas de gordura.
+                Fundada em 2023, a Horizonte Desentupidora atende
+                Belo Horizonte e Região Metropolitana com foco
+                em agilidade, transparência e soluções para
+                problemas de entupimento e limpeza.
               </p>
             </div>
 
@@ -718,15 +780,15 @@ export default function LimpezaCaixaGorduraPage() {
                 </h2>
 
                 <p className="mt-4 leading-relaxed text-white/75">
-                  A Horizonte realiza limpeza e desentupimento de
-                  caixas de gordura em Belo Horizonte e cidades próximas,
-                  atendendo residências, restaurantes, empresas
+                  A Horizonte realiza limpeza de caixas de gordura
+                  em Belo Horizonte e cidades próximas, atendendo
+                  casas, apartamentos, restaurantes, empresas
                   e condomínios.
                 </p>
 
                 <p className="mt-4 leading-relaxed text-white/75">
-                  Consulte o atendimento para sua localização e informe
-                  o tipo de imóvel e o problema identificado.
+                  Informe seu bairro ou cidade e consulte
+                  a disponibilidade de atendimento para seu endereço.
                 </p>
 
                 <a
@@ -740,13 +802,13 @@ export default function LimpezaCaixaGorduraPage() {
 
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 md:p-8">
                 <h3 className="text-xl font-bold">
-                  Fale com a Horizonte Desentupidora
+                  Solicite uma visita técnica gratuita
                 </h3>
 
                 <p className="mt-3 text-sm leading-relaxed text-white/75">
-                  Precisa limpar uma caixa de gordura? Solicite uma
-                  visita técnica gratuita e receba seu orçamento
-                  antes de contratar.
+                  Precisa de limpeza de caixa de gordura?
+                  Converse com a Horizonte, explique sua necessidade
+                  e receba um orçamento sem compromisso.
                 </p>
 
                 <a
@@ -810,13 +872,14 @@ export default function LimpezaCaixaGorduraPage() {
             </span>
 
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-              Caixa de gordura cheia ou entupida? A Horizonte pode ajudar!
+              Caixa de gordura cheia? Solicite a limpeza com a Horizonte!
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-brand-ink/70 md:text-lg">
-              Entre em contato com nossa equipe e solicite uma visita
-              técnica gratuita em Belo Horizonte e Região Metropolitana.
-              Receba seu orçamento sem compromisso antes da execução.
+              Atendemos residências, restaurantes, cozinhas comerciais
+              e condomínios em Belo Horizonte e região. Solicite
+              sua visita técnica gratuita, receba o orçamento
+              sem compromisso e decida com tranquilidade.
             </p>
 
             <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
