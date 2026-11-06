@@ -60,14 +60,15 @@ const services = [
     imageAlt:
       'Técnico realizando hidrojateamento de alta pressão em tubulação externa.',
   },
-  {
-    icon: Container,
-    title: 'Limpeza e desentupimento de caixa de gordura',
-    description:
-      'Limpeza de caixas de gordura com acúmulo de resíduos, mau cheiro, dificuldade de escoamento ou risco de transbordamento.',
-    image: null,
-    imageAlt: '',
-  },
+{
+  icon: Container,
+  title: 'Limpeza e desentupimento de caixa de gordura',
+  description:
+    'Limpeza de caixas de gordura com acúmulo de resíduos, mau cheiro, dificuldade de escoamento ou risco de transbordamento.',
+  image: '/images/servico-caixa-gordura.webp',
+  imageAlt:
+    'Técnico da Horizonte realizando limpeza de caixa de gordura.',
+},
 ]
 
 function getWhatsappLink(serviceTitle: string) {
