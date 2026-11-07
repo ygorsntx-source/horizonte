@@ -47,6 +47,26 @@ export const metadata: Metadata = {
   },
 }
 
+// Schema.org - Dados estruturados do serviço de desentupimento de vaso sanitário
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id':
+    'https://horizonte24h.com.br/servicos/desentupimento-de-vaso-sanitario#service',
+  name: 'Desentupimento de vaso sanitário',
+  serviceType: 'Desentupimento de vaso sanitário',
+  url: 'https://horizonte24h.com.br/servicos/desentupimento-de-vaso-sanitario',
+  description:
+    'Serviço de desentupimento de vasos sanitários em Belo Horizonte e Região Metropolitana, com avaliação presencial, orientação técnica e orçamento antes da execução.',
+  provider: {
+    '@id': 'https://horizonte24h.com.br/#organization',
+  },
+  areaServed: [
+    'Belo Horizonte, Minas Gerais, Brasil',
+    'Região Metropolitana de Belo Horizonte, Minas Gerais, Brasil',
+  ],
+}
+
 const problems = [
   'A água do vaso sanitário não desce após acionar a descarga.',
   'A água sobe e existe risco de transbordamento.',
@@ -208,6 +228,14 @@ export default function DesentupimentoVasoSanitarioPage() {
       <SiteHeader />
 
       <main>
+        {/* Schema.org - Serviço de desentupimento de vaso sanitário */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceJsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
+
         {/* HERO */}
         <section className="relative overflow-hidden bg-brand-navy py-12 text-white md:py-20">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:px-6 lg:grid-cols-2">
