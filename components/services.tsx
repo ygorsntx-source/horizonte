@@ -1,5 +1,6 @@
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 import {
   Toilet,
@@ -10,6 +11,7 @@ import {
   Container,
   Phone,
   MessageCircle,
+  ArrowRight,
 } from 'lucide-react'
 
 import { PHONE_TEL, WHATSAPP_URL } from '@/lib/site'
@@ -23,6 +25,7 @@ const services = [
     image: '/images/servico-vaso.webp',
     imageAlt:
       'Técnico da Horizonte realizando desentupimento de vaso sanitário com equipamento profissional.',
+    href: '/servicos/desentupimento-de-vaso-sanitario',
   },
   {
     icon: Droplets,
@@ -32,6 +35,7 @@ const services = [
     image: '/images/servico-pia.webp',
     imageAlt:
       'Técnicos realizando desentupimento de pia de cozinha com máquina rotativa.',
+    href: '/servicos/desentupimento-de-pia',
   },
   {
     icon: CircleDot,
@@ -41,6 +45,7 @@ const services = [
     image: '/images/servico-ralo.webp',
     imageAlt:
       'Técnico realizando desentupimento de ralo com equipamento profissional.',
+    href: '/servicos/desentupimento-de-ralo',
   },
   {
     icon: Waves,
@@ -50,6 +55,7 @@ const services = [
     image: '/images/servico-rede-esgoto.webp',
     imageAlt:
       'Equipe realizando desentupimento de rede de esgoto em poço de visita.',
+    href: '/servicos/desentupimento-de-rede-de-esgoto',
   },
   {
     icon: Gauge,
@@ -59,16 +65,18 @@ const services = [
     image: '/images/servico-hidrojateamento.webp',
     imageAlt:
       'Técnico realizando hidrojateamento de alta pressão em tubulação externa.',
+    href: '/servicos/hidrojateamento',
   },
-{
-  icon: Container,
-  title: 'Limpeza e desentupimento de caixa de gordura',
-  description:
-    'Limpeza de caixas de gordura com acúmulo de resíduos, mau cheiro, dificuldade de escoamento ou risco de transbordamento.',
-  image: '/images/servico-caixa-gordura.webp',
-  imageAlt:
-    'Técnico da Horizonte realizando limpeza de caixa de gordura.',
-},
+  {
+    icon: Container,
+    title: 'Limpeza e desentupimento de caixa de gordura',
+    description:
+      'Limpeza de caixas de gordura com acúmulo de resíduos, mau cheiro, dificuldade de escoamento ou risco de transbordamento.',
+    image: '/images/servico-caixa-gordura.webp',
+    imageAlt:
+      'Técnico da Horizonte realizando limpeza de caixa de gordura.',
+    href: '/servicos/limpeza-de-caixa-de-gordura',
+  },
 ]
 
 function getWhatsappLink(serviceTitle: string) {
@@ -95,7 +103,7 @@ export function Services() {
 
         <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map(
-            ({ icon: Icon, title, description, image, imageAlt }) => (
+            ({ icon: Icon, title, description, image, imageAlt, href }) => (
               <li
                 key={title}
                 className="flex flex-col overflow-hidden rounded-xl border border-black/8 bg-brand-gray transition-colors hover:border-brand-orange/40"
@@ -143,6 +151,15 @@ export function Services() {
                     <MessageCircle className="size-4" aria-hidden="true" />
                     SOLICITAR ORÇAMENTO
                   </a>
+
+                  <Link
+                    href={href}
+                    aria-label={`Conhecer o serviço de ${title}`}
+                    className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-brand-orange bg-white px-4 py-3 text-sm font-bold text-brand-navy transition-colors hover:bg-brand-orange/10 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-brand-orange/40"
+                  >
+                    CONHECER SERVIÇO
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
                 </div>
               </li>
             ),
