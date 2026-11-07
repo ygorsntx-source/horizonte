@@ -48,6 +48,26 @@ export const metadata: Metadata = {
   },
 }
 
+// Schema.org - Dados estruturados do serviço de desentupimento de rede de esgoto
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id':
+    'https://horizonte24h.com.br/servicos/desentupimento-de-rede-de-esgoto#service',
+  name: 'Desentupimento de rede de esgoto',
+  serviceType: 'Desentupimento de rede de esgoto',
+  url: 'https://horizonte24h.com.br/servicos/desentupimento-de-rede-de-esgoto',
+  description:
+    'Serviço de desentupimento de redes de esgoto em Belo Horizonte e Região Metropolitana, com avaliação técnica, equipamentos adequados e orçamento antes da execução.',
+  provider: {
+    '@id': 'https://horizonte24h.com.br/#organization',
+  },
+  areaServed: [
+    'Belo Horizonte, Minas Gerais, Brasil',
+    'Região Metropolitana de Belo Horizonte, Minas Gerais, Brasil',
+  ],
+}
+
 const problems = [
   'Esgoto retornando pelos ralos ou pontos de escoamento.',
   'Água acumulada em áreas externas e pontos de drenagem.',
@@ -214,6 +234,14 @@ export default function DesentupimentoRedeEsgotoPage() {
       <SiteHeader />
 
       <main>
+        {/* Schema.org - Serviço de desentupimento de rede de esgoto */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceJsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
+
         {/* HERO */}
         <section className="relative overflow-hidden bg-brand-navy py-12 text-white md:py-20">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:px-6 lg:grid-cols-2">
