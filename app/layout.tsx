@@ -42,6 +42,22 @@ export const viewport: Viewport = {
   themeColor: '#082b4c',
 }
 
+// Dados estruturados da Horizonte Desentupidora (Schema.org)
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://horizonte24h.com.br/#organization',
+  name: 'Horizonte Desentupidora',
+  url: 'https://horizonte24h.com.br/',
+  telephone: '+5531990174346',
+  description:
+    'Desentupidora 24 horas em Belo Horizonte e Região Metropolitana. Serviços de desentupimento de vasos sanitários, pias, ralos e redes de esgoto, limpeza de caixas de gordura e hidrojateamento.',
+  areaServed: [
+    'Belo Horizonte, Minas Gerais, Brasil',
+    'Região Metropolitana de Belo Horizonte, Minas Gerais, Brasil',
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,6 +82,17 @@ export default function RootLayout({
       </head>
 
       <body className="antialiased">
+        {/* Schema.org - Identificação da empresa */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(
+              /</g,
+              '\\u003c',
+            ),
+          }}
+        />
+
         {/* Google Tag Manager - NoScript */}
         <noscript>
           <iframe
