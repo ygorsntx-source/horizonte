@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://horizonte24h.com.br/</loc>
   </url>
+
+  <url>
+    <loc>https://horizonte24h.com.br/servicos/desentupimento-de-vaso-sanitario</loc>
+  </url>
+
+  <url>
+    <loc>https://horizonte24h.com.br/servicos/desentupimento-de-pia</loc>
+  </url>
+
+  <url>
+    <loc>https://horizonte24h.com.br/servicos/desentupimento-de-ralo</loc>
+  </url>
+
+  <url>
+    <loc>https://horizonte24h.com.br/servicos/desentupimento-de-rede-de-esgoto</loc>
+  </url>
+
+  <url>
+    <loc>https://horizonte24h.com.br/servicos/hidrojateamento</loc>
+  </url>
+
+  <url>
+    <loc>https://horizonte24h.com.br/servicos/limpeza-de-caixa-de-gordura</loc>
+  </url>
+
 </urlset>
