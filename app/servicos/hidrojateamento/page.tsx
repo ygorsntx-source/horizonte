@@ -49,6 +49,25 @@ export const metadata: Metadata = {
   },
 }
 
+// Schema.org - Dados estruturados do serviço de hidrojateamento
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://horizonte24h.com.br/servicos/hidrojateamento#service',
+  name: 'Hidrojateamento de tubulações',
+  serviceType: 'Hidrojateamento de tubulações',
+  url: 'https://horizonte24h.com.br/servicos/hidrojateamento',
+  description:
+    'Serviço de limpeza e desobstrução de tubulações por hidrojateamento de alta pressão em Belo Horizonte e Região Metropolitana, conforme avaliação técnica.',
+  provider: {
+    '@id': 'https://horizonte24h.com.br/#organization',
+  },
+  areaServed: [
+    'Belo Horizonte, Minas Gerais, Brasil',
+    'Região Metropolitana de Belo Horizonte, Minas Gerais, Brasil',
+  ],
+}
+
 const problems = [
   'Gordura acumulada nas paredes internas das tubulações.',
   'Resíduos que dificultam a passagem da água.',
@@ -215,6 +234,14 @@ export default function HidrojateamentoPage() {
       <SiteHeader />
 
       <main>
+        {/* Schema.org - Serviço de hidrojateamento */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceJsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
+
         {/* HERO */}
         <section className="relative overflow-hidden bg-brand-navy py-12 text-white md:py-20">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:px-6 lg:grid-cols-2">
