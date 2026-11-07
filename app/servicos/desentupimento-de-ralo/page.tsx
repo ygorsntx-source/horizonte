@@ -48,6 +48,25 @@ export const metadata: Metadata = {
   },
 }
 
+// Schema.org - Dados estruturados do serviço de desentupimento de ralos
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://horizonte24h.com.br/servicos/desentupimento-de-ralo#service',
+  name: 'Desentupimento de ralos',
+  serviceType: 'Desentupimento de ralos',
+  url: 'https://horizonte24h.com.br/servicos/desentupimento-de-ralo',
+  description:
+    'Serviço de desentupimento de ralos de banheiro, boxes de chuveiro, quintais e áreas externas em Belo Horizonte e Região Metropolitana, com avaliação técnica e orçamento antes da execução.',
+  provider: {
+    '@id': 'https://horizonte24h.com.br/#organization',
+  },
+  areaServed: [
+    'Belo Horizonte, Minas Gerais, Brasil',
+    'Região Metropolitana de Belo Horizonte, Minas Gerais, Brasil',
+  ],
+}
+
 const problems = [
   'A água do ralo demora para escoar.',
   'A água fica acumulada no piso do banheiro.',
@@ -219,6 +238,14 @@ export default function DesentupimentoDeRaloPage() {
       <SiteHeader />
 
       <main>
+        {/* Schema.org - Serviço de desentupimento de ralos */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceJsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
+
         {/* HERO */}
         <section className="relative overflow-hidden bg-brand-navy py-12 text-white md:py-20">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:px-6 lg:grid-cols-2">
