@@ -1,4 +1,3 @@
-
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import {
@@ -49,6 +48,30 @@ export const metadata: Metadata = {
     type: 'website',
     images: ['/images/servico-caixa-gordura.webp'],
   },
+}
+
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://horizonte24h.com.br/servicos/limpeza-de-caixa-de-gordura#service',
+  name: 'Limpeza de Caixa de Gordura em Belo Horizonte',
+  serviceType: 'Limpeza e desentupimento de caixa de gordura',
+  url: 'https://horizonte24h.com.br/servicos/limpeza-de-caixa-de-gordura',
+  description:
+    'Serviço de limpeza e desentupimento de caixas de gordura residenciais e comerciais em Belo Horizonte e Região Metropolitana.',
+  provider: {
+    '@id': 'https://horizonte24h.com.br/#organization',
+  },
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'Belo Horizonte',
+    },
+    {
+      '@type': 'AdministrativeArea',
+      name: 'Região Metropolitana de Belo Horizonte',
+    },
+  ],
 }
 
 const problems = [
@@ -227,6 +250,13 @@ export default function LimpezaCaixaGorduraPage() {
       <SiteHeader />
 
       <main>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceJsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
+
         {/* HERO */}
         <section className="relative overflow-hidden bg-brand-navy py-12 text-white md:py-20">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:px-6 lg:grid-cols-2">
