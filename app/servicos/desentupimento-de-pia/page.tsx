@@ -32,7 +32,7 @@ const whatsappLink = `${WHATSAPP_URL}?text=${encodeURIComponent(
 )}`
 
 export const metadata: Metadata = {
-  title: 'Desentupimento de Pia em BH | Prumo 24 Horas',
+  title: 'Desentupimento de Pia em BH 24 Horas',
   description:
     'Pia entupida em Belo Horizonte? Prumo Desentupidora com atendimento 24 horas, visita técnica gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
   alternates: {

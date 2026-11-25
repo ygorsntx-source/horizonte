@@ -33,7 +33,7 @@ const whatsappLink = `${WHATSAPP_URL}?text=${encodeURIComponent(
 )}`
 
 export const metadata: Metadata = {
-  title: 'Hidrojateamento em BH | Prumo Desentupidora 24h',
+  title: 'Hidrojateamento em BH 24 Horas',
   description:
     'Hidrojateamento de tubulações em Belo Horizonte e região. Atendimento 24 horas, visita técnica gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
   alternates: {

@@ -34,7 +34,7 @@ const whatsappLink = `${WHATSAPP_URL}?text=${encodeURIComponent(
 )}`
 
 export const metadata: Metadata = {
-  title: 'Limpeza de Caixa de Gordura em BH | Prumo Desentupidora',
+  title: 'Limpeza de Caixa de Gordura em BH 24 Horas',
   description:
     'Precisa limpar uma caixa de gordura em Belo Horizonte? Atendimento residencial e comercial 24h, visita gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
   alternates: {
