@@ -3,6 +3,9 @@ import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { CNPJ } from '@/lib/site'
+import { MAIN_CITIES, OTHER_CITIES } from '@/lib/areas'
+import { GOOGLE_MAPS_URL } from '@/lib/reviews'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    'Desentupidora 24 horas em Belo Horizonte e Região Metropolitana. Desentupimento de vasos sanitários, pias, ralos, redes de esgoto, caixas de gordura e hidrojateamento. Orçamento antes da execução.',
+    'Desentupidora 24 horas em BH e região. Vaso, pia, ralo, esgoto, caixa de gordura e hidrojateamento. Visita sem custo e preço combinado antes de começar.',
 
   openGraph: {
     type: 'website',
@@ -49,21 +52,46 @@ export const viewport: Viewport = {
   themeColor: '#082b4c',
 }
 
-// Dados estruturados da Prumo Desentupidora (Schema.org)
+// Dados estruturados da Prumo Desentupidora (Schema.org).
+// "Plumber" é o tipo de empresa local do Schema.org que inclui desentupidoras.
+// Quando os perfis das redes sociais estiverem prontos, acrescente em sameAs.
 const organizationJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'Plumber',
   '@id': 'https://prumodesentupidora.com.br/#organization',
   name: 'Prumo Desentupidora',
   url: 'https://prumodesentupidora.com.br/',
   logo: 'https://prumodesentupidora.com.br/images/prumo-logo-quadrado.png',
+  image: 'https://prumodesentupidora.com.br/images/prumo-compartilhamento.jpg',
   telephone: '+5531990174346',
+  taxID: CNPJ,
   description:
-    'Desentupidora 24 horas em Belo Horizonte e Região Metropolitana. Serviços de desentupimento de vasos sanitários, pias, ralos e redes de esgoto, limpeza de caixas de gordura e hidrojateamento.',
-  areaServed: [
-    'Belo Horizonte, Minas Gerais, Brasil',
-    'Região Metropolitana de Belo Horizonte, Minas Gerais, Brasil',
-  ],
+    'Desentupidora 24 horas em Belo Horizonte e Região Metropolitana. Desentupimento de vaso sanitário, pia, ralo e rede de esgoto, limpeza de caixa de gordura e hidrojateamento.',
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'MG',
+    addressCountry: 'BR',
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday',
+    ],
+    opens: '00:00',
+    closes: '23:59',
+  },
+  areaServed: [...MAIN_CITIES, ...OTHER_CITIES].map((city) => ({
+    '@type': 'City',
+    name: `${city}, MG`,
+  })),
+  hasMap: GOOGLE_MAPS_URL,
+  sameAs: [GOOGLE_MAPS_URL],
 }
 
 export default function RootLayout({
