@@ -1,5 +1,4 @@
 
-import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { Inter } from 'next/font/google'
@@ -112,8 +111,6 @@ export default function RootLayout({
         </Script>
 
         {children}
-
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
