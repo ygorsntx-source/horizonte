@@ -29,18 +29,18 @@ import { WhatsAppFloat } from '@/components/whatsapp-float'
 const pagePath = '/servicos/hidrojateamento'
 
 const whatsappLink = `${WHATSAPP_URL}?text=${encodeURIComponent(
-  'Olá! Gostaria de solicitar um orçamento para serviço de hidrojateamento com a Horizonte Desentupidora.',
+  'Olá! Gostaria de solicitar um orçamento para serviço de hidrojateamento com a Prumo Desentupidora.',
 )}`
 
 export const metadata: Metadata = {
-  title: 'Hidrojateamento em BH | Horizonte Desentupidora 24h',
+  title: 'Hidrojateamento em BH 24 Horas',
   description:
     'Hidrojateamento de tubulações em Belo Horizonte e região. Atendimento 24 horas, visita técnica gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
   alternates: {
     canonical: pagePath,
   },
   openGraph: {
-    title: 'Hidrojateamento em Belo Horizonte | Horizonte',
+    title: 'Hidrojateamento em Belo Horizonte | Prumo',
     description:
       'Limpeza e desobstrução de tubulações por hidrojateamento de alta pressão em BH e Região Metropolitana. Solicite seu orçamento.',
     url: pagePath,
@@ -53,14 +53,14 @@ export const metadata: Metadata = {
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': 'https://horizonte24h.com.br/servicos/hidrojateamento#service',
+  '@id': 'https://prumodesentupidora.com.br/servicos/hidrojateamento#service',
   name: 'Hidrojateamento de tubulações',
   serviceType: 'Hidrojateamento de tubulações',
-  url: 'https://horizonte24h.com.br/servicos/hidrojateamento',
+  url: 'https://prumodesentupidora.com.br/servicos/hidrojateamento',
   description:
     'Serviço de limpeza e desobstrução de tubulações por hidrojateamento de alta pressão em Belo Horizonte e Região Metropolitana, conforme avaliação técnica.',
   provider: {
-    '@id': 'https://horizonte24h.com.br/#organization',
+    '@id': 'https://prumodesentupidora.com.br/#organization',
   },
   areaServed: [
     'Belo Horizonte, Minas Gerais, Brasil',
@@ -187,9 +187,9 @@ const faqs = [
       'Sim. O procedimento pode ser utilizado em determinadas aplicações de limpeza e desobstrução de redes de esgoto, conforme as condições de acesso e da tubulação.',
   },
   {
-    question: 'A Horizonte realiza hidrojateamento 24 horas?',
+    question: 'A Prumo realiza hidrojateamento 24 horas?',
     answer:
-      'Sim. A Horizonte Desentupidora oferece atendimento 24 horas em Belo Horizonte e Região Metropolitana.',
+      'Sim. A Prumo Desentupidora oferece atendimento 24 horas em Belo Horizonte e Região Metropolitana.',
   },
   {
     question: 'Em quanto tempo a equipe chega?',
@@ -217,12 +217,12 @@ const faqs = [
       'Sim. Os serviços possuem garantia, respeitando as condições aplicáveis ao atendimento e os direitos previstos no Código de Defesa do Consumidor.',
   },
   {
-    question: 'A Horizonte emite nota fiscal?',
+    question: 'A Prumo emite nota fiscal?',
     answer:
       'Sim. Emitimos nota fiscal pelos serviços prestados.',
   },
   {
-    question: 'Quais cidades a Horizonte atende?',
+    question: 'Quais cidades a Prumo atende?',
     answer:
       'Atendemos Belo Horizonte e diversas cidades da Região Metropolitana, incluindo Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Nova Lima e outras localidades. Consulte o atendimento para seu endereço.',
   },
@@ -273,7 +273,7 @@ export default function HidrojateamentoPage() {
 
               <p className="mt-5 text-base leading-relaxed text-white/80 md:text-lg">
                 Precisa de limpeza ou desobstrução de tubulações?
-                A Horizonte utiliza hidrojateamento para auxiliar
+                A Prumo utiliza hidrojateamento para auxiliar
                 na remoção de gordura e resíduos acumulados em
                 tubulações e redes, conforme avaliação técnica.
               </p>
@@ -319,7 +319,7 @@ export default function HidrojateamentoPage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
               <Image
                 src="/images/servico-hidrojateamento.webp"
-                alt="Técnico da Horizonte realizando hidrojateamento de alta pressão em tubulação"
+                alt="Técnico da Prumo realizando hidrojateamento de alta pressão em tubulação"
                 fill
                 preload
                 sizes="(max-width: 1023px) 100vw, 50vw"
@@ -583,7 +583,7 @@ export default function HidrojateamentoPage() {
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-                Como funciona o atendimento da Horizonte?
+                Como funciona o atendimento da Prumo?
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
@@ -645,7 +645,7 @@ export default function HidrojateamentoPage() {
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <div className="max-w-3xl">
               <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
-                Por que escolher a Horizonte?
+                Por que escolher a Prumo?
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
@@ -653,7 +653,7 @@ export default function HidrojateamentoPage() {
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
-                Fundada em 2023, a Horizonte Desentupidora trabalha
+                Fundada em 2023, a Prumo Desentupidora trabalha
                 para oferecer atendimento ágil, avaliação técnica
                 e soluções adequadas para diferentes necessidades
                 de limpeza e desobstrução de tubulações.
@@ -714,7 +714,7 @@ export default function HidrojateamentoPage() {
                 </h2>
 
                 <p className="mt-4 leading-relaxed text-white/75">
-                  A Horizonte realiza serviços de hidrojateamento
+                  A Prumo realiza serviços de hidrojateamento
                   em Belo Horizonte e cidades próximas, atendendo
                   residências, empresas e condomínios.
                 </p>
@@ -740,7 +740,7 @@ export default function HidrojateamentoPage() {
 
                 <p className="mt-3 text-sm leading-relaxed text-white/75">
                   Precisa de limpeza de tubulações por hidrojateamento?
-                  Converse com a Horizonte e receba seu orçamento
+                  Converse com a Prumo e receba seu orçamento
                   sem compromisso.
                 </p>
 
@@ -809,7 +809,7 @@ export default function HidrojateamentoPage() {
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-brand-ink/70 md:text-lg">
-              Entre em contato com a Horizonte Desentupidora.
+              Entre em contato com a Prumo Desentupidora.
               Solicite uma visita técnica gratuita, receba
               o orçamento sem compromisso e conheça a solução
               indicada para sua instalação.

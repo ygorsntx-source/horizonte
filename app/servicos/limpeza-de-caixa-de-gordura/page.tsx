@@ -30,18 +30,18 @@ import { WhatsAppFloat } from '@/components/whatsapp-float'
 const pagePath = '/servicos/limpeza-de-caixa-de-gordura'
 
 const whatsappLink = `${WHATSAPP_URL}?text=${encodeURIComponent(
-  'Olá! Preciso de limpeza de caixa de gordura e gostaria de solicitar uma visita técnica gratuita com a Horizonte Desentupidora.',
+  'Olá! Preciso de limpeza de caixa de gordura e gostaria de solicitar uma visita técnica gratuita com a Prumo Desentupidora.',
 )}`
 
 export const metadata: Metadata = {
-  title: 'Limpeza de Caixa de Gordura em BH | Horizonte Desentupidora',
+  title: 'Limpeza de Caixa de Gordura em BH 24 Horas',
   description:
     'Precisa limpar uma caixa de gordura em Belo Horizonte? Atendimento residencial e comercial 24h, visita gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
   alternates: {
     canonical: pagePath,
   },
   openGraph: {
-    title: 'Limpeza de Caixa de Gordura em BH | Horizonte Desentupidora',
+    title: 'Limpeza de Caixa de Gordura em BH | Prumo Desentupidora',
     description:
       'Limpeza de caixas de gordura em casas, apartamentos, restaurantes e empresas em BH e Região Metropolitana. Solicite atendimento pelo WhatsApp.',
     url: pagePath,
@@ -53,14 +53,14 @@ export const metadata: Metadata = {
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': 'https://horizonte24h.com.br/servicos/limpeza-de-caixa-de-gordura#service',
+  '@id': 'https://prumodesentupidora.com.br/servicos/limpeza-de-caixa-de-gordura#service',
   name: 'Limpeza de Caixa de Gordura em Belo Horizonte',
   serviceType: 'Limpeza e desentupimento de caixa de gordura',
-  url: 'https://horizonte24h.com.br/servicos/limpeza-de-caixa-de-gordura',
+  url: 'https://prumodesentupidora.com.br/servicos/limpeza-de-caixa-de-gordura',
   description:
     'Serviço de limpeza e desentupimento de caixas de gordura residenciais e comerciais em Belo Horizonte e Região Metropolitana.',
   provider: {
-    '@id': 'https://horizonte24h.com.br/#organization',
+    '@id': 'https://prumodesentupidora.com.br/#organization',
   },
   areaServed: [
     {
@@ -178,9 +178,9 @@ const benefits = [
 
 const faqs = [
   {
-    question: 'A Horizonte realiza limpeza de caixa de gordura 24 horas?',
+    question: 'A Prumo realiza limpeza de caixa de gordura 24 horas?',
     answer:
-      'Sim. A Horizonte Desentupidora oferece atendimento 24 horas para limpeza e desentupimento de caixas de gordura em Belo Horizonte e Região Metropolitana.',
+      'Sim. A Prumo Desentupidora oferece atendimento 24 horas para limpeza e desentupimento de caixas de gordura em Belo Horizonte e Região Metropolitana.',
   },
   {
     question: 'Vocês fazem limpeza de caixa de gordura residencial?',
@@ -188,7 +188,7 @@ const faqs = [
       'Sim. Atendemos casas e apartamentos que precisam de limpeza ou desentupimento de caixa de gordura.',
   },
   {
-    question: 'A Horizonte atende restaurantes e cozinhas comerciais?',
+    question: 'A Prumo atende restaurantes e cozinhas comerciais?',
     answer:
       'Sim. Realizamos atendimento para restaurantes, lanchonetes, cozinhas comerciais, empresas e condomínios.',
   },
@@ -233,12 +233,12 @@ const faqs = [
       'Sim. Os serviços possuem garantia, respeitando as condições aplicáveis ao atendimento e os direitos previstos no Código de Defesa do Consumidor.',
   },
   {
-    question: 'A Horizonte emite nota fiscal?',
+    question: 'A Prumo emite nota fiscal?',
     answer:
       'Sim. Emitimos nota fiscal pelos serviços prestados.',
   },
   {
-    question: 'Quais cidades a Horizonte atende?',
+    question: 'Quais cidades a Prumo atende?',
     answer:
       'Atendemos Belo Horizonte e diversas cidades da Região Metropolitana, incluindo Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Nova Lima e outras localidades. Consulte o atendimento para seu endereço.',
   },
@@ -288,7 +288,7 @@ export default function LimpezaCaixaGorduraPage() {
 
               <p className="mt-5 text-base leading-relaxed text-white/80 md:text-lg">
                 Caixa de gordura cheia, mau cheiro ou dificuldade de
-                escoamento? A Horizonte realiza limpeza e desentupimento
+                escoamento? A Prumo realiza limpeza e desentupimento
                 de caixas de gordura em casas, apartamentos, restaurantes,
                 cozinhas comerciais e condomínios.
               </p>
@@ -334,7 +334,7 @@ export default function LimpezaCaixaGorduraPage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
               <Image
                 src="/images/servico-caixa-gordura.webp"
-                alt="Técnico da Horizonte realizando limpeza de caixa de gordura"
+                alt="Técnico da Prumo realizando limpeza de caixa de gordura"
                 fill
                 preload
                 sizes="(max-width: 1023px) 100vw, 50vw"
@@ -593,7 +593,7 @@ export default function LimpezaCaixaGorduraPage() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
                   src="/images/servico-caixa-gordura.webp"
-                  alt="Serviço de limpeza de caixa de gordura realizado pela equipe da Horizonte"
+                  alt="Serviço de limpeza de caixa de gordura realizado pela equipe da Prumo"
                   fill
                   sizes="(max-width: 767px) 100vw, 50vw"
                   loading="lazy"
@@ -677,7 +677,7 @@ export default function LimpezaCaixaGorduraPage() {
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-                Como funciona o atendimento da Horizonte?
+                Como funciona o atendimento da Prumo?
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
@@ -741,7 +741,7 @@ export default function LimpezaCaixaGorduraPage() {
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <div className="max-w-3xl">
               <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
-                Por que escolher a Horizonte?
+                Por que escolher a Prumo?
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
@@ -749,7 +749,7 @@ export default function LimpezaCaixaGorduraPage() {
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
-                Fundada em 2023, a Horizonte Desentupidora atende
+                Fundada em 2023, a Prumo Desentupidora atende
                 Belo Horizonte e Região Metropolitana com foco
                 em agilidade, transparência e soluções para
                 problemas de entupimento e limpeza.
@@ -810,7 +810,7 @@ export default function LimpezaCaixaGorduraPage() {
                 </h2>
 
                 <p className="mt-4 leading-relaxed text-white/75">
-                  A Horizonte realiza limpeza de caixas de gordura
+                  A Prumo realiza limpeza de caixas de gordura
                   em Belo Horizonte e cidades próximas, atendendo
                   casas, apartamentos, restaurantes, empresas
                   e condomínios.
@@ -837,7 +837,7 @@ export default function LimpezaCaixaGorduraPage() {
 
                 <p className="mt-3 text-sm leading-relaxed text-white/75">
                   Precisa de limpeza de caixa de gordura?
-                  Converse com a Horizonte, explique sua necessidade
+                  Converse com a Prumo, explique sua necessidade
                   e receba um orçamento sem compromisso.
                 </p>
 
@@ -902,7 +902,7 @@ export default function LimpezaCaixaGorduraPage() {
             </span>
 
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-              Caixa de gordura cheia? Solicite a limpeza com a Horizonte!
+              Caixa de gordura cheia? Solicite a limpeza com a Prumo!
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-brand-ink/70 md:text-lg">

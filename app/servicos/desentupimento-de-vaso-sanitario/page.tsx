@@ -27,18 +27,18 @@ import { WhatsAppFloat } from '@/components/whatsapp-float'
 const pagePath = '/servicos/desentupimento-de-vaso-sanitario'
 
 const whatsappLink = `${WHATSAPP_URL}?text=${encodeURIComponent(
-  'Olá! Estou com um problema no vaso sanitário e gostaria de solicitar um orçamento com a Horizonte Desentupidora.',
+  'Olá! Estou com um problema no vaso sanitário e gostaria de solicitar um orçamento com a Prumo Desentupidora.',
 )}`
 
 export const metadata: Metadata = {
   title: 'Vaso Sanitário Entupido em BH? Desentupidora 24h',
   description:
-    'Vaso sanitário entupido em Belo Horizonte? Horizonte Desentupidora: atendimento 24h, visita técnica gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
+    'Vaso sanitário entupido em Belo Horizonte? Prumo Desentupidora: atendimento 24h, visita técnica gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
   alternates: {
     canonical: pagePath,
   },
   openGraph: {
-    title: 'Desentupimento de Vaso Sanitário em BH | Horizonte',
+    title: 'Desentupimento de Vaso Sanitário em BH | Prumo',
     description:
       'Atendimento para vaso sanitário entupido em Belo Horizonte e Região Metropolitana. Visita gratuita, orçamento sem compromisso e atendimento 24 horas.',
     url: pagePath,
@@ -52,14 +52,14 @@ const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   '@id':
-    'https://horizonte24h.com.br/servicos/desentupimento-de-vaso-sanitario#service',
+    'https://prumodesentupidora.com.br/servicos/desentupimento-de-vaso-sanitario#service',
   name: 'Desentupimento de vaso sanitário',
   serviceType: 'Desentupimento de vaso sanitário',
-  url: 'https://horizonte24h.com.br/servicos/desentupimento-de-vaso-sanitario',
+  url: 'https://prumodesentupidora.com.br/servicos/desentupimento-de-vaso-sanitario',
   description:
     'Serviço de desentupimento de vasos sanitários em Belo Horizonte e Região Metropolitana, com avaliação presencial, orientação técnica e orçamento antes da execução.',
   provider: {
-    '@id': 'https://horizonte24h.com.br/#organization',
+    '@id': 'https://prumodesentupidora.com.br/#organization',
   },
   areaServed: [
     'Belo Horizonte, Minas Gerais, Brasil',
@@ -171,9 +171,9 @@ const benefits = [
 
 const faqs = [
   {
-    question: 'A Horizonte realiza desentupimento de vaso sanitário 24 horas?',
+    question: 'A Prumo realiza desentupimento de vaso sanitário 24 horas?',
     answer:
-      'Sim. A Horizonte Desentupidora oferece atendimento 24 horas para desentupimento de vasos sanitários em Belo Horizonte e Região Metropolitana.',
+      'Sim. A Prumo Desentupidora oferece atendimento 24 horas para desentupimento de vasos sanitários em Belo Horizonte e Região Metropolitana.',
   },
   {
     question: 'Em quanto tempo a equipe chega ao endereço?',
@@ -206,12 +206,12 @@ const faqs = [
       'Sim. Os serviços possuem garantia, de acordo com as condições aplicáveis ao atendimento e os direitos previstos no Código de Defesa do Consumidor.',
   },
   {
-    question: 'A Horizonte emite nota fiscal?',
+    question: 'A Prumo emite nota fiscal?',
     answer:
       'Sim. Emitimos nota fiscal pelos serviços prestados.',
   },
   {
-    question: 'A Horizonte atende condomínios e empresas?',
+    question: 'A Prumo atende condomínios e empresas?',
     answer:
       'Sim. Realizamos atendimento em residências, empresas, estabelecimentos comerciais e condomínios.',
   },
@@ -262,7 +262,7 @@ export default function DesentupimentoVasoSanitarioPage() {
               </span>
 
               <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
-                Vaso sanitário entupido? Conte com a Horizonte Desentupidora!
+                Vaso sanitário entupido? Conte com a Prumo Desentupidora!
               </h1>
 
               <p className="mt-5 text-base leading-relaxed text-white/80 md:text-lg">
@@ -313,7 +313,7 @@ export default function DesentupimentoVasoSanitarioPage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
               <Image
                 src="/images/servico-vaso.webp"
-                alt="Técnico da Horizonte realizando desentupimento de vaso sanitário"
+                alt="Técnico da Prumo realizando desentupimento de vaso sanitário"
                 fill
                 preload
                 sizes="(max-width: 1023px) 100vw, 50vw"
@@ -508,7 +508,7 @@ export default function DesentupimentoVasoSanitarioPage() {
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-                Como funciona o atendimento da Horizonte?
+                Como funciona o atendimento da Prumo?
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
@@ -572,7 +572,7 @@ export default function DesentupimentoVasoSanitarioPage() {
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <div className="max-w-3xl">
               <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
-                Por que escolher a Horizonte?
+                Por que escolher a Prumo?
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
@@ -580,7 +580,7 @@ export default function DesentupimentoVasoSanitarioPage() {
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
-                Fundada em 2023, a Horizonte Desentupidora trabalha para
+                Fundada em 2023, a Prumo Desentupidora trabalha para
                 oferecer atendimento ágil, transparência na contratação
                 e soluções adequadas para diferentes problemas de
                 entupimento.
@@ -641,7 +641,7 @@ export default function DesentupimentoVasoSanitarioPage() {
                 </h2>
 
                 <p className="mt-4 leading-relaxed text-white/75">
-                  A Horizonte realiza serviços de desentupimento em Belo
+                  A Prumo realiza serviços de desentupimento em Belo
                   Horizonte e cidades próximas, atendendo residências,
                   empresas e condomínios.
                 </p>
@@ -662,7 +662,7 @@ export default function DesentupimentoVasoSanitarioPage() {
 
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 md:p-8">
                 <h3 className="text-xl font-bold">
-                  Fale com a Horizonte Desentupidora
+                  Fale com a Prumo Desentupidora
                 </h3>
 
                 <p className="mt-3 text-sm leading-relaxed text-white/75">
@@ -731,7 +731,7 @@ export default function DesentupimentoVasoSanitarioPage() {
             </span>
 
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-              Vaso sanitário entupido? A Horizonte pode ajudar!
+              Vaso sanitário entupido? A Prumo pode ajudar!
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-brand-ink/70 md:text-lg">

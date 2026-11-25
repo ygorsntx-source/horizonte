@@ -18,7 +18,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-desentupimento.webp"
-          alt="Equipe da Horizonte Desentupidora realizando serviço de desentupimento"
+          alt="Equipe da Prumo Desentupidora realizando serviço de desentupimento"
           fill
           loading="eager"
           fetchPriority="high"
@@ -39,7 +39,7 @@ export function Hero() {
           </span>
 
           <h1 className="mt-5 text-balance text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
-            Entupiu? Chame a Horizonte Desentupidora!
+            Entupiu? Chame a Prumo Desentupidora!
           </h1>
 
           <p className="mt-4 text-lg font-medium text-white/90 md:text-2xl">

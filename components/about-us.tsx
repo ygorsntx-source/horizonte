@@ -63,11 +63,11 @@ export function AboutUs() {
             </span>
 
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-              Conheça a Horizonte Desentupidora
+              Conheça a Prumo Desentupidora
             </h2>
 
             <p className="mt-5 text-base leading-relaxed text-brand-ink/75 md:text-lg">
-              Fundada em 2023, a Horizonte Desentupidora atua
+              Fundada em 2023, a Prumo Desentupidora atua
               com serviços de desentupimento em Belo Horizonte
               e Região Metropolitana, atendendo residências,
               empresas e condomínios.
@@ -95,7 +95,7 @@ export function AboutUs() {
               rel="noopener noreferrer"
               className="mt-7 inline-flex items-center justify-center rounded-lg bg-brand-orange px-7 py-4 text-sm font-bold tracking-wide text-white transition-colors hover:bg-brand-orange-dark focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-brand-orange/50"
             >
-              FALE COM A HORIZONTE
+              FALE COM A PRUMO
             </a>
           </div>
 

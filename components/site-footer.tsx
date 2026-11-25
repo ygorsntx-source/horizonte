@@ -6,9 +6,11 @@ export function SiteFooter() {
     <footer className="bg-brand-ink py-10 pb-28 text-white/80 md:pb-10">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <img
-          src="/images/logo-horizonte.webp"
+          src="/images/logo-prumo.svg"
           alt={`Logo ${COMPANY_NAME}`}
-          className="h-14 w-auto"
+          width={388}
+          height={100}
+          className="h-12 w-auto"
         />
         <p className="mt-4 max-w-md text-sm">
           Desentupimento 24 horas em Belo Horizonte e Região Metropolitana.

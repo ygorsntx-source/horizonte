@@ -1,0 +1,3 @@
+# Arquivos do Next.js com hash no nome: podem ficar em cache por 1 ano
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable

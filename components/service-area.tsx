@@ -50,7 +50,7 @@ export function ServiceArea() {
           </h2>
 
           <p className="mt-4 text-base leading-relaxed text-white/75 md:text-lg">
-            A Horizonte Desentupidora oferece serviços de desentupimento
+            A Prumo Desentupidora oferece serviços de desentupimento
             24 horas em Belo Horizonte e cidades da Região Metropolitana.
             Atendemos residências, empresas e condomínios com serviços de
             desentupimento de vasos sanitários, pias, ralos, caixas de gordura,
@@ -115,7 +115,7 @@ export function ServiceArea() {
         <div className="mt-8 max-w-2xl">
           <p className="text-sm leading-relaxed text-white/65">
             Precisa de uma desentupidora perto de você? Entre em contato
-            com a Horizonte, informe seu bairro ou cidade e consulte o
+            com a Prumo, informe seu bairro ou cidade e consulte o
             atendimento para seu endereço.
           </p>
         </div>
