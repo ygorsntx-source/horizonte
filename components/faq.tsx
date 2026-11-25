@@ -1,71 +1,55 @@
 
-'use client'
-
-import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
-import { cn } from '@/lib/utils'
 
 const faqs = [
   {
-    question: 'A Prumo Desentupidora atende 24 horas?',
+    question: 'Vocês atendem de madrugada?',
     answer:
-      'Sim. A Prumo Desentupidora oferece atendimento 24 horas para serviços de desentupimento em Belo Horizonte e Região Metropolitana.',
+      'Sim. O atendimento é 24 horas. Pode ligar ou chamar no WhatsApp a qualquer hora.',
   },
   {
-    question: 'Em quanto tempo a equipe chega ao local?',
+    question: 'Quanto tempo vocês demoram pra chegar?',
     answer:
-      'Nossa visita técnica é realizada em até 30 minutos. Entre em contato e informe seu endereço para solicitar atendimento.',
+      'Normalmente a gente chega em até 30 minutos. Depende do seu bairro e de onde a equipe está na hora, então já te passamos uma previsão quando você chama.',
   },
   {
-    question: 'A visita técnica é gratuita?',
+    question: 'Cobram pela visita?',
     answer:
-      'Sim. A visita técnica para avaliação do problema é gratuita. Nossa equipe vai até o local para identificar a situação e orientar sobre a solução adequada.',
+      'Não. A gente vai até o local, vê o problema e passa o orçamento sem cobrar nada por isso.',
   },
   {
-    question: 'O orçamento é feito antes do serviço?',
+    question: 'Quanto custa um desentupimento?',
     answer:
-      'Sim. Após avaliar o problema, apresentamos o orçamento com clareza antes de iniciar qualquer execução.',
+      'Depende do que está entupido, de onde está o entupimento e do equipamento que vai precisar. Por isso a gente só passa o valor depois de ver o problema, e o serviço só começa se você aprovar.',
   },
   {
-    question: 'O orçamento é sem compromisso?',
+    question: 'Vocês fazem limpeza de caixa de gordura?',
     answer:
-      'Sim. Você recebe o orçamento e pode avaliar as condições antes de contratar. O serviço somente começa após sua aprovação.',
+      'Fazemos. Limpeza e desentupimento de caixa de gordura em casa, restaurante, comércio e condomínio.',
   },
   {
-    question: 'Quais serviços de desentupimento a Prumo realiza?',
+    question: 'O serviço tem garantia? Emitem nota fiscal?',
     answer:
-      'Realizamos desentupimento de vasos sanitários, pias, ralos e redes de esgoto, além de limpeza de caixas de gordura e hidrojateamento de tubulações.',
+      'Sim para as duas. O serviço tem garantia, conforme o que foi feito e o Código de Defesa do Consumidor, e emitimos nota fiscal.',
   },
   {
-    question: 'A Prumo realiza limpeza de caixa de gordura?',
+    question: 'Quais formas de pagamento vocês aceitam?',
     answer:
-      'Sim. Realizamos limpeza e desentupimento de caixas de gordura, atendendo situações de acúmulo de resíduos, mau cheiro, obstrução e transbordamento.',
+      'Pix, cartão de débito, cartão de crédito, dinheiro e transferência.',
   },
   {
-    question: 'Os serviços de desentupimento possuem garantia?',
+    question: 'Quais cidades vocês atendem?',
     answer:
-      'Sim. Os serviços possuem garantia, respeitando as condições aplicáveis a cada atendimento e os direitos previstos no Código de Defesa do Consumidor.',
+      'Belo Horizonte e região metropolitana: Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Nova Lima, Sabará, Ibirité, Lagoa Santa e outras. Se tiver dúvida, chama no WhatsApp e informa o bairro.',
   },
   {
-    question: 'A Prumo Desentupidora emite nota fiscal?',
+    question: 'Atendem empresas e condomínios?',
     answer:
-      'Sim. Emitimos nota fiscal pelos serviços prestados, proporcionando mais transparência e formalização no atendimento.',
-  },
-  {
-    question: 'Quais cidades a Prumo atende?',
-    answer:
-      'Atendemos Belo Horizonte e cidades da Região Metropolitana, incluindo Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Nova Lima e outras localidades da região. Entre em contato e consulte o atendimento para seu endereço.',
-  },
-  {
-    question: 'A Prumo atende empresas e condomínios?',
-    answer:
-      'Sim. Atendemos residências, empresas, estabelecimentos comerciais e condomínios, com serviços de desentupimento para diferentes necessidades.',
+      'Sim. Além de casas e apartamentos, atendemos comércios, restaurantes, empresas e condomínios.',
   },
 ]
 
 export function Faq() {
-  const [open, setOpen] = useState<number | null>(0)
-
   return (
     <section
       id="perguntas-frequentes"
@@ -73,57 +57,31 @@ export function Faq() {
     >
       <div className="mx-auto max-w-3xl px-4 md:px-6">
         <div className="max-w-2xl">
-          <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
-            Tire suas dúvidas
-          </span>
-
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-            Perguntas frequentes sobre serviços de desentupimento
+          <h2 className="text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
+            Perguntas que a gente mais recebe
           </h2>
 
           <p className="mt-3 text-base leading-relaxed text-brand-ink/70 md:text-lg">
-            Confira as principais dúvidas sobre a Prumo Desentupidora,
-            nossos serviços, atendimento 24 horas e regiões atendidas.
+            Não achou sua dúvida aqui? Chama a gente no WhatsApp.
           </p>
         </div>
 
         <div className="mt-8 divide-y divide-black/8 rounded-lg border border-black/8">
-          {faqs.map((faq, index) => {
-            const isOpen = open === index
+          {faqs.map((faq, index) => (
+            <details key={faq.question} className="group" open={index === 0}>
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left text-base font-bold leading-relaxed text-brand-ink transition-colors hover:bg-brand-gray [&::-webkit-details-marker]:hidden">
+                <h3>{faq.question}</h3>
+                <ChevronDown
+                  className="size-5 shrink-0 text-brand-orange transition-transform group-open:rotate-180"
+                  aria-hidden="true"
+                />
+              </summary>
 
-            return (
-              <div key={faq.question}>
-                <h3>
-                  <button
-                    type="button"
-                    onClick={() => setOpen(isOpen ? null : index)}
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-answer-${index}`}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-base font-bold leading-relaxed text-brand-ink transition-colors hover:bg-brand-gray"
-                  >
-                    {faq.question}
-
-                    <ChevronDown
-                      className={cn(
-                        'size-5 shrink-0 text-brand-orange transition-transform',
-                        isOpen && 'rotate-180',
-                      )}
-                      aria-hidden="true"
-                    />
-                  </button>
-                </h3>
-
-                {isOpen && (
-                  <p
-                    id={`faq-answer-${index}`}
-                    className="px-5 pb-5 text-sm leading-relaxed text-brand-ink/70"
-                  >
-                    {faq.answer}
-                  </p>
-                )}
-              </div>
-            )
-          })}
+              <p className="px-5 pb-5 text-base leading-relaxed text-brand-ink/70">
+                {faq.answer}
+              </p>
+            </details>
+          ))}
         </div>
       </div>
     </section>

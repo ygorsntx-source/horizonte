@@ -9,6 +9,9 @@
 
 export const GOOGLE_PLACE_ID = 'ChIJkQnr7ceG2AARJKjQ4NEWh3Y'
 
+// Endereço do perfil no Google Maps (o número é o identificador fixo do perfil)
+export const GOOGLE_MAPS_URL = 'https://maps.google.com/?cid=8540820309007181860'
+
 export const GOOGLE_REVIEWS_URL = `https://search.google.com/local/reviews?placeid=${GOOGLE_PLACE_ID}`
 
 export const GOOGLE_WRITE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`
