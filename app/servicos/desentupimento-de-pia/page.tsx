@@ -28,18 +28,18 @@ import { WhatsAppFloat } from '@/components/whatsapp-float'
 const pagePath = '/servicos/desentupimento-de-pia'
 
 const whatsappLink = `${WHATSAPP_URL}?text=${encodeURIComponent(
-  'Olá! Estou com uma pia entupida e gostaria de solicitar um orçamento com a Horizonte Desentupidora.',
+  'Olá! Estou com uma pia entupida e gostaria de solicitar um orçamento com a Prumo Desentupidora.',
 )}`
 
 export const metadata: Metadata = {
-  title: 'Desentupimento de Pia em BH | Horizonte 24 Horas',
+  title: 'Desentupimento de Pia em BH | Prumo 24 Horas',
   description:
-    'Pia entupida em Belo Horizonte? Horizonte Desentupidora com atendimento 24 horas, visita técnica gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
+    'Pia entupida em Belo Horizonte? Prumo Desentupidora com atendimento 24 horas, visita técnica gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
   alternates: {
     canonical: pagePath,
   },
   openGraph: {
-    title: 'Desentupimento de Pia em Belo Horizonte | Horizonte',
+    title: 'Desentupimento de Pia em Belo Horizonte | Prumo',
     description:
       'Serviço de desentupimento de pias de cozinha, banheiro e área de serviço em BH e Região Metropolitana. Solicite seu orçamento.',
     url: pagePath,
@@ -52,14 +52,14 @@ export const metadata: Metadata = {
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': 'https://horizonte24h.com.br/servicos/desentupimento-de-pia#service',
+  '@id': 'https://prumodesentupidora.com.br/servicos/desentupimento-de-pia#service',
   name: 'Desentupimento de pia',
   serviceType: 'Desentupimento de pia',
-  url: 'https://horizonte24h.com.br/servicos/desentupimento-de-pia',
+  url: 'https://prumodesentupidora.com.br/servicos/desentupimento-de-pia',
   description:
     'Serviço de desentupimento de pias de cozinha, banheiro e área de serviço em Belo Horizonte e Região Metropolitana, com avaliação presencial e orçamento antes da execução.',
   provider: {
-    '@id': 'https://horizonte24h.com.br/#organization',
+    '@id': 'https://prumodesentupidora.com.br/#organization',
   },
   areaServed: [
     'Belo Horizonte, Minas Gerais, Brasil',
@@ -171,9 +171,9 @@ const benefits = [
 
 const faqs = [
   {
-    question: 'A Horizonte realiza desentupimento de pia 24 horas?',
+    question: 'A Prumo realiza desentupimento de pia 24 horas?',
     answer:
-      'Sim. A Horizonte Desentupidora oferece atendimento 24 horas para desentupimento de pias em Belo Horizonte e Região Metropolitana.',
+      'Sim. A Prumo Desentupidora oferece atendimento 24 horas para desentupimento de pias em Belo Horizonte e Região Metropolitana.',
   },
   {
     question: 'Vocês desentopem pia de cozinha e banheiro?',
@@ -216,12 +216,12 @@ const faqs = [
       'Sim. Os serviços possuem garantia, de acordo com as condições aplicáveis ao atendimento e os direitos previstos no Código de Defesa do Consumidor.',
   },
   {
-    question: 'A Horizonte emite nota fiscal?',
+    question: 'A Prumo emite nota fiscal?',
     answer:
       'Sim. Emitimos nota fiscal pelos serviços prestados.',
   },
   {
-    question: 'Quais cidades a Horizonte atende?',
+    question: 'Quais cidades a Prumo atende?',
     answer:
       'Atendemos Belo Horizonte e diversas cidades da Região Metropolitana, incluindo Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Nova Lima e outras localidades. Consulte o atendimento para seu endereço.',
   },
@@ -267,7 +267,7 @@ export default function DesentupimentoDePiaPage() {
               </span>
 
               <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
-                Pia entupida? Chame a Horizonte Desentupidora!
+                Pia entupida? Chame a Prumo Desentupidora!
               </h1>
 
               <p className="mt-5 text-base leading-relaxed text-white/80 md:text-lg">
@@ -317,7 +317,7 @@ export default function DesentupimentoDePiaPage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
               <Image
                 src="/images/servico-pia.webp"
-                alt="Técnicos da Horizonte realizando desentupimento de pia de cozinha com máquina rotativa"
+                alt="Técnicos da Prumo realizando desentupimento de pia de cozinha com máquina rotativa"
                 fill
                 preload
                 sizes="(max-width: 1023px) 100vw, 50vw"
@@ -497,7 +497,7 @@ export default function DesentupimentoDePiaPage() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
                   src="/images/servico-pia.webp"
-                  alt="Equipe da Horizonte utilizando máquina desentupidora rotativa em uma pia de cozinha"
+                  alt="Equipe da Prumo utilizando máquina desentupidora rotativa em uma pia de cozinha"
                   fill
                   sizes="(max-width: 767px) 100vw, 50vw"
                   loading="lazy"
@@ -543,7 +543,7 @@ export default function DesentupimentoDePiaPage() {
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-                Como funciona o atendimento da Horizonte?
+                Como funciona o atendimento da Prumo?
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
@@ -607,7 +607,7 @@ export default function DesentupimentoDePiaPage() {
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <div className="max-w-3xl">
               <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
-                Por que escolher a Horizonte?
+                Por que escolher a Prumo?
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
@@ -615,7 +615,7 @@ export default function DesentupimentoDePiaPage() {
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
-                Fundada em 2023, a Horizonte Desentupidora trabalha
+                Fundada em 2023, a Prumo Desentupidora trabalha
                 para oferecer atendimento ágil, transparência na
                 contratação e soluções adequadas para diferentes
                 problemas de entupimento.
@@ -676,7 +676,7 @@ export default function DesentupimentoDePiaPage() {
                 </h2>
 
                 <p className="mt-4 leading-relaxed text-white/75">
-                  A Horizonte realiza desentupimento de pias em Belo
+                  A Prumo realiza desentupimento de pias em Belo
                   Horizonte e cidades próximas, atendendo residências,
                   empresas e condomínios.
                 </p>
@@ -697,7 +697,7 @@ export default function DesentupimentoDePiaPage() {
 
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 md:p-8">
                 <h3 className="text-xl font-bold">
-                  Fale com a Horizonte Desentupidora
+                  Fale com a Prumo Desentupidora
                 </h3>
 
                 <p className="mt-3 text-sm leading-relaxed text-white/75">
@@ -767,7 +767,7 @@ export default function DesentupimentoDePiaPage() {
             </span>
 
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-              Pia entupida? A Horizonte pode ajudar!
+              Pia entupida? A Prumo pode ajudar!
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-brand-ink/70 md:text-lg">

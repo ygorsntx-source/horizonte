@@ -7,9 +7,9 @@ import { cn } from '@/lib/utils'
 
 const faqs = [
   {
-    question: 'A Horizonte Desentupidora atende 24 horas?',
+    question: 'A Prumo Desentupidora atende 24 horas?',
     answer:
-      'Sim. A Horizonte Desentupidora oferece atendimento 24 horas para serviços de desentupimento em Belo Horizonte e Região Metropolitana.',
+      'Sim. A Prumo Desentupidora oferece atendimento 24 horas para serviços de desentupimento em Belo Horizonte e Região Metropolitana.',
   },
   {
     question: 'Em quanto tempo a equipe chega ao local?',
@@ -32,12 +32,12 @@ const faqs = [
       'Sim. Você recebe o orçamento e pode avaliar as condições antes de contratar. O serviço somente começa após sua aprovação.',
   },
   {
-    question: 'Quais serviços de desentupimento a Horizonte realiza?',
+    question: 'Quais serviços de desentupimento a Prumo realiza?',
     answer:
       'Realizamos desentupimento de vasos sanitários, pias, ralos e redes de esgoto, além de limpeza de caixas de gordura e hidrojateamento de tubulações.',
   },
   {
-    question: 'A Horizonte realiza limpeza de caixa de gordura?',
+    question: 'A Prumo realiza limpeza de caixa de gordura?',
     answer:
       'Sim. Realizamos limpeza e desentupimento de caixas de gordura, atendendo situações de acúmulo de resíduos, mau cheiro, obstrução e transbordamento.',
   },
@@ -47,17 +47,17 @@ const faqs = [
       'Sim. Os serviços possuem garantia, respeitando as condições aplicáveis a cada atendimento e os direitos previstos no Código de Defesa do Consumidor.',
   },
   {
-    question: 'A Horizonte Desentupidora emite nota fiscal?',
+    question: 'A Prumo Desentupidora emite nota fiscal?',
     answer:
       'Sim. Emitimos nota fiscal pelos serviços prestados, proporcionando mais transparência e formalização no atendimento.',
   },
   {
-    question: 'Quais cidades a Horizonte atende?',
+    question: 'Quais cidades a Prumo atende?',
     answer:
       'Atendemos Belo Horizonte e cidades da Região Metropolitana, incluindo Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Nova Lima e outras localidades da região. Entre em contato e consulte o atendimento para seu endereço.',
   },
   {
-    question: 'A Horizonte atende empresas e condomínios?',
+    question: 'A Prumo atende empresas e condomínios?',
     answer:
       'Sim. Atendemos residências, empresas, estabelecimentos comerciais e condomínios, com serviços de desentupimento para diferentes necessidades.',
   },
@@ -82,7 +82,7 @@ export function Faq() {
           </h2>
 
           <p className="mt-3 text-base leading-relaxed text-brand-ink/70 md:text-lg">
-            Confira as principais dúvidas sobre a Horizonte Desentupidora,
+            Confira as principais dúvidas sobre a Prumo Desentupidora,
             nossos serviços, atendimento 24 horas e regiões atendidas.
           </p>
         </div>

@@ -11,12 +11,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://horizonte24h.com.br'),
+  metadataBase: new URL('https://prumodesentupidora.com.br'),
 
   title: {
     default:
-      'Horizonte Desentupidora | Desentupimento 24 horas em BH e Região',
-    template: '%s | Horizonte Desentupidora',
+      'Prumo Desentupidora | Desentupimento 24 horas em BH e Região',
+    template: '%s | Prumo Desentupidora',
   },
 
   description:
@@ -25,15 +25,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    siteName: 'Horizonte Desentupidora',
+    siteName: 'Prumo Desentupidora',
     title:
-      'Horizonte Desentupidora | Desentupimento 24 horas em BH e Região',
+      'Prumo Desentupidora | Desentupimento 24 horas em BH e Região',
     description:
       'Desentupidora 24 horas em Belo Horizonte e Região Metropolitana. Atendimento para residências, empresas e condomínios.',
+    images: [
+      {
+        url: '/images/prumo-compartilhamento.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Prumo Desentupidora — desentupimento 24 horas em BH e Região Metropolitana',
+      },
+    ],
   },
 
-  icons: {
-    icon: '/images/favicon.webp',
+  twitter: {
+    card: 'summary_large_image',
   },
 }
 
@@ -41,13 +49,14 @@ export const viewport: Viewport = {
   themeColor: '#082b4c',
 }
 
-// Dados estruturados da Horizonte Desentupidora (Schema.org)
+// Dados estruturados da Prumo Desentupidora (Schema.org)
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': 'https://horizonte24h.com.br/#organization',
-  name: 'Horizonte Desentupidora',
-  url: 'https://horizonte24h.com.br/',
+  '@id': 'https://prumodesentupidora.com.br/#organization',
+  name: 'Prumo Desentupidora',
+  url: 'https://prumodesentupidora.com.br/',
+  logo: 'https://prumodesentupidora.com.br/images/prumo-logo-quadrado.png',
   telephone: '+5531990174346',
   description:
     'Desentupidora 24 horas em Belo Horizonte e Região Metropolitana. Serviços de desentupimento de vasos sanitários, pias, ralos e redes de esgoto, limpeza de caixas de gordura e hidrojateamento.',

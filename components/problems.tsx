@@ -24,7 +24,7 @@ export function Problems() {
           </h2>
 
           <p className="mt-3 text-base leading-relaxed text-brand-ink/70 md:text-lg">
-            A Horizonte Desentupidora realiza serviços de desentupimento em
+            A Prumo Desentupidora realiza serviços de desentupimento em
             Belo Horizonte e Região Metropolitana. Atendemos diferentes
             situações em vasos sanitários, pias, ralos, caixas de gordura,
             tubulações e redes de esgoto.

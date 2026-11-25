@@ -12,7 +12,7 @@ export function ContactSection() {
               Precisa de atendimento?
             </h2>
             <p className="mt-3 text-base text-brand-ink/70 md:text-lg">
-              Entre em contato com a Horizonte Desentupidora e explique o que
+              Entre em contato com a Prumo Desentupidora e explique o que
               está acontecendo. O atendimento é rápido e você fala direto com a
               equipe.
             </p>

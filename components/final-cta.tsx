@@ -14,7 +14,7 @@ export function FinalCta() {
           Não deixe o entupimento piorar.
         </h2>
         <p className="mt-4 text-lg text-white/80 md:text-xl">
-          Fale agora com a Horizonte Desentupidora.
+          Fale agora com a Prumo Desentupidora.
         </p>
 
         <a

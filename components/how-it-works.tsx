@@ -12,7 +12,7 @@ const steps = [
     icon: PhoneCall,
     title: 'Entre em contato',
     description:
-      'Ligue ou envie uma mensagem pelo WhatsApp para solicitar atendimento da Horizonte Desentupidora.',
+      'Ligue ou envie uma mensagem pelo WhatsApp para solicitar atendimento da Prumo Desentupidora.',
   },
   {
     icon: MessageSquareText,
@@ -46,7 +46,7 @@ export function HowItWorks() {
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="max-w-3xl">
           <h2 className="text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-            Como funciona o atendimento da Horizonte Desentupidora?
+            Como funciona o atendimento da Prumo Desentupidora?
           </h2>
 
           <p className="mt-3 text-base leading-relaxed text-brand-ink/70 md:text-lg">

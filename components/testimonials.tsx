@@ -68,7 +68,7 @@ export function Testimonials() {
           </h2>
 
           <p className="mt-3 text-base text-brand-ink/70 md:text-lg">
-            Avaliações reais de quem já contou com a Horizonte para resolver o
+            Avaliações reais de quem já contou com a Prumo para resolver o
             entupimento.
           </p>
         </div>

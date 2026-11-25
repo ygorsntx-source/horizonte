@@ -28,18 +28,18 @@ import { WhatsAppFloat } from '@/components/whatsapp-float'
 const pagePath = '/servicos/desentupimento-de-rede-de-esgoto'
 
 const whatsappLink = `${WHATSAPP_URL}?text=${encodeURIComponent(
-  'Olá! Estou com um problema na rede de esgoto e gostaria de solicitar um orçamento com a Horizonte Desentupidora.',
+  'Olá! Estou com um problema na rede de esgoto e gostaria de solicitar um orçamento com a Prumo Desentupidora.',
 )}`
 
 export const metadata: Metadata = {
   title: 'Desentupimento de Rede de Esgoto em BH | 24 Horas',
   description:
-    'Rede de esgoto entupida em Belo Horizonte? Horizonte Desentupidora com atendimento 24h, visita técnica gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
+    'Rede de esgoto entupida em Belo Horizonte? Prumo Desentupidora com atendimento 24h, visita técnica gratuita em até 30 minutos, orçamento sem compromisso e garantia.',
   alternates: {
     canonical: pagePath,
   },
   openGraph: {
-    title: 'Desentupimento de Rede de Esgoto em BH | Horizonte',
+    title: 'Desentupimento de Rede de Esgoto em BH | Prumo',
     description:
       'Desentupimento de redes de esgoto em Belo Horizonte e Região Metropolitana. Visita gratuita, orçamento sem compromisso e atendimento 24 horas.',
     url: pagePath,
@@ -53,14 +53,14 @@ const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   '@id':
-    'https://horizonte24h.com.br/servicos/desentupimento-de-rede-de-esgoto#service',
+    'https://prumodesentupidora.com.br/servicos/desentupimento-de-rede-de-esgoto#service',
   name: 'Desentupimento de rede de esgoto',
   serviceType: 'Desentupimento de rede de esgoto',
-  url: 'https://horizonte24h.com.br/servicos/desentupimento-de-rede-de-esgoto',
+  url: 'https://prumodesentupidora.com.br/servicos/desentupimento-de-rede-de-esgoto',
   description:
     'Serviço de desentupimento de redes de esgoto em Belo Horizonte e Região Metropolitana, com avaliação técnica, equipamentos adequados e orçamento antes da execução.',
   provider: {
-    '@id': 'https://horizonte24h.com.br/#organization',
+    '@id': 'https://prumodesentupidora.com.br/#organization',
   },
   areaServed: [
     'Belo Horizonte, Minas Gerais, Brasil',
@@ -172,9 +172,9 @@ const benefits = [
 
 const faqs = [
   {
-    question: 'A Horizonte realiza desentupimento de rede de esgoto 24 horas?',
+    question: 'A Prumo realiza desentupimento de rede de esgoto 24 horas?',
     answer:
-      'Sim. A Horizonte Desentupidora oferece atendimento 24 horas para serviços de desentupimento de redes de esgoto em Belo Horizonte e Região Metropolitana.',
+      'Sim. A Prumo Desentupidora oferece atendimento 24 horas para serviços de desentupimento de redes de esgoto em Belo Horizonte e Região Metropolitana.',
   },
   {
     question: 'Quais são os sinais de uma rede de esgoto entupida?',
@@ -212,7 +212,7 @@ const faqs = [
       'Sim. Os serviços possuem garantia, de acordo com as condições aplicáveis ao atendimento e os direitos previstos no Código de Defesa do Consumidor.',
   },
   {
-    question: 'A Horizonte atende empresas e condomínios?',
+    question: 'A Prumo atende empresas e condomínios?',
     answer:
       'Sim. Realizamos serviços em residências, empresas, estabelecimentos comerciais e condomínios.',
   },
@@ -222,7 +222,7 @@ const faqs = [
       'Sim. Emitimos nota fiscal pelos serviços prestados.',
   },
   {
-    question: 'Quais cidades a Horizonte atende?',
+    question: 'Quais cidades a Prumo atende?',
     answer:
       'Atendemos Belo Horizonte e diversas cidades da Região Metropolitana, incluindo Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Nova Lima e outras localidades. Consulte o atendimento para seu endereço.',
   },
@@ -268,7 +268,7 @@ export default function DesentupimentoRedeEsgotoPage() {
               </span>
 
               <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
-                Rede de esgoto entupida? Chame a Horizonte!
+                Rede de esgoto entupida? Chame a Prumo!
               </h1>
 
               <p className="mt-5 text-base leading-relaxed text-white/80 md:text-lg">
@@ -319,7 +319,7 @@ export default function DesentupimentoRedeEsgotoPage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
               <Image
                 src="/images/servico-rede-esgoto.webp"
-                alt="Equipe da Horizonte realizando desentupimento de rede de esgoto em poço de visita"
+                alt="Equipe da Prumo realizando desentupimento de rede de esgoto em poço de visita"
                 fill
                 preload
                 sizes="(max-width: 1023px) 100vw, 50vw"
@@ -545,7 +545,7 @@ export default function DesentupimentoRedeEsgotoPage() {
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-                Como funciona o atendimento da Horizonte?
+                Como funciona o atendimento da Prumo?
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
@@ -609,7 +609,7 @@ export default function DesentupimentoRedeEsgotoPage() {
           <div className="mx-auto max-w-6xl px-4 md:px-6">
             <div className="max-w-3xl">
               <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
-                Por que escolher a Horizonte?
+                Por que escolher a Prumo?
               </span>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
@@ -617,7 +617,7 @@ export default function DesentupimentoRedeEsgotoPage() {
               </h2>
 
               <p className="mt-4 leading-relaxed text-brand-ink/70 md:text-lg">
-                Fundada em 2023, a Horizonte Desentupidora trabalha
+                Fundada em 2023, a Prumo Desentupidora trabalha
                 para oferecer atendimento ágil, transparência na
                 contratação e soluções adequadas para diferentes
                 problemas em redes de esgoto.
@@ -678,7 +678,7 @@ export default function DesentupimentoRedeEsgotoPage() {
                 </h2>
 
                 <p className="mt-4 leading-relaxed text-white/75">
-                  A Horizonte realiza serviços de desentupimento de
+                  A Prumo realiza serviços de desentupimento de
                   redes de esgoto em Belo Horizonte e cidades próximas,
                   atendendo residências, empresas e condomínios.
                 </p>
@@ -699,7 +699,7 @@ export default function DesentupimentoRedeEsgotoPage() {
 
               <div className="rounded-xl border border-white/10 bg-white/5 p-6 md:p-8">
                 <h3 className="text-xl font-bold">
-                  Fale com a Horizonte Desentupidora
+                  Fale com a Prumo Desentupidora
                 </h3>
 
                 <p className="mt-3 text-sm leading-relaxed text-white/75">
@@ -769,7 +769,7 @@ export default function DesentupimentoRedeEsgotoPage() {
             </span>
 
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-              Rede de esgoto entupida? A Horizonte pode ajudar!
+              Rede de esgoto entupida? A Prumo pode ajudar!
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-brand-ink/70 md:text-lg">

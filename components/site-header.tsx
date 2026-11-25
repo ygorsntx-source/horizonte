@@ -14,12 +14,11 @@ export function SiteHeader() {
         >
           <span className="flex items-center justify-center">
             <Image
-              src="/images/logo-horizonte.webp"
+              src="/images/logo-prumo.svg"
               alt={`Logo ${COMPANY_NAME}`}
-              width={308}
-              height={154}
-              sizes="(max-width: 767px) 88px, 112px"
-              className="h-11 w-auto md:h-14"
+              width={388}
+              height={100}
+              className="h-9 w-auto md:h-12"
               loading="eager"
             />
           </span>

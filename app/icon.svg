@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64.00 64.00">
+<title>Prumo Desentupidora</title>
+
+<rect width="64" height="64" rx="14.08" fill="#082b4c"/>
+<g transform="translate(3.84,3.00) scale(0.5632)">
+  <line x1="50" y1="3" x2="50" y2="18" stroke="#e8eef4" stroke-width="3.4" stroke-linecap="round"/>
+  <rect x="42.5" y="16" width="15" height="8" rx="2" fill="#e8eef4"/>
+  <path d="M50 26.5 H36 Q30 26.5 30 32.5 V46 L50 80 Z" fill="#f47b20"/>
+  <path d="M50 26.5 H64 Q70 26.5 70 32.5 V46 L50 80 Z" fill="#d9670f"/>
+  <path d="M50 84.5 C50 84.5 44.6 91 44.6 94.4 A5.4 5.4 0 0 0 55.4 94.4 C55.4 91 50 84.5 50 84.5 Z" fill="#2a9df4"/>
+</g>
+</svg>

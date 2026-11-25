@@ -24,7 +24,7 @@ const services = [
       'Vaso sanitário entupido, água que não desce ou risco de transbordamento? Realizamos desentupimentos em residências, empresas e condomínios.',
     image: '/images/servico-vaso.webp',
     imageAlt:
-      'Técnico da Horizonte realizando desentupimento de vaso sanitário com equipamento profissional.',
+      'Técnico da Prumo realizando desentupimento de vaso sanitário com equipamento profissional.',
     href: '/servicos/desentupimento-de-vaso-sanitario',
   },
   {
@@ -74,7 +74,7 @@ const services = [
       'Limpeza de caixas de gordura com acúmulo de resíduos, mau cheiro, dificuldade de escoamento ou risco de transbordamento.',
     image: '/images/servico-caixa-gordura.webp',
     imageAlt:
-      'Técnico da Horizonte realizando limpeza de caixa de gordura.',
+      'Técnico da Prumo realizando limpeza de caixa de gordura.',
     href: '/servicos/limpeza-de-caixa-de-gordura',
   },
 ]
@@ -95,7 +95,7 @@ export function Services() {
           </h2>
 
           <p className="mt-3 text-base leading-relaxed text-brand-ink/70 md:text-lg">
-            A Horizonte Desentupidora oferece atendimento para diferentes
+            A Prumo Desentupidora oferece atendimento para diferentes
             tipos de entupimento em residências, empresas e condomínios.
             Conheça nossos serviços e solicite seu orçamento.
           </p>
