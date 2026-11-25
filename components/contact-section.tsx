@@ -23,7 +23,7 @@ export function ContactSection() {
           {PHONE_DISPLAY}
         </a>
 
-        <div className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
+        <div className="mx-auto mt-8 flex max-w-lg flex-col gap-3 sm:flex-row">
           <CallButton full />
           <WhatsAppButton full />
         </div>

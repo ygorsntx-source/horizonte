@@ -35,7 +35,7 @@ export function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        'inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/25 bg-white/10 px-6 py-4 text-base font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-white/40',
+        'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg border-2 border-white/25 bg-white/10 px-6 py-4 text-base font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-white/40',
         full && 'w-full',
         className,
       )}
