@@ -1,6 +1,8 @@
 import { MapPin, MessageCircle } from 'lucide-react'
 import { WHATSAPP_URL } from '@/lib/site'
+import Link from 'next/link'
 import { MAIN_CITIES, OTHER_CITIES } from '@/lib/areas'
+import { CITIES } from '@/lib/cities'
 
 const askMessage = encodeURIComponent(
   'Olá! Vocês atendem no meu endereço? Estou no bairro/cidade: ',
@@ -38,15 +40,29 @@ export function ServiceArea({
             Principais cidades atendidas
           </h3>
           <ul className="flex flex-wrap gap-2.5">
-            {MAIN_CITIES.map((city) => (
-              <li
-                key={city}
-                className="inline-flex items-center gap-1.5 rounded-lg bg-brand-orange px-4 py-2.5 text-sm font-bold text-white"
-              >
-                <MapPin className="size-4" aria-hidden="true" />
-                {city}
-              </li>
-            ))}
+            {MAIN_CITIES.map((city) => {
+              const page = CITIES.find((c) => c.name === city)
+              const chip =
+                'inline-flex items-center gap-1.5 rounded-lg bg-brand-orange px-4 py-2.5 text-sm font-bold text-white'
+              return (
+                <li key={city}>
+                  {page ? (
+                    <Link
+                      href={`/desentupidora/${page.slug}`}
+                      className={`${chip} transition-colors hover:bg-brand-orange-dark`}
+                    >
+                      <MapPin className="size-4" aria-hidden="true" />
+                      {city}
+                    </Link>
+                  ) : (
+                    <span className={chip}>
+                      <MapPin className="size-4" aria-hidden="true" />
+                      {city}
+                    </span>
+                  )}
+                </li>
+              )
+            })}
           </ul>
         </div>
 
