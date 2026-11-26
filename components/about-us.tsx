@@ -1,60 +1,111 @@
-const steps = [
+import {
+  Clock3,
+  ShieldCheck,
+  FileText,
+  MapPin,
+  Handshake,
+  Search,
+} from 'lucide-react'
+import { WHATSAPP_URL } from '@/lib/site'
+
+const highlights = [
   {
-    title: 'Você liga ou chama no WhatsApp',
-    text: 'Conta o que está acontecendo e passa o endereço. Se der, manda uma foto ou um vídeo do problema.',
+    icon: Clock3,
+    title: 'Atendimento 24 horas',
+    description:
+      'Entupimento não espera horário comercial. Atendemos de dia, à noite e de madrugada.',
   },
   {
-    title: 'A gente vai até aí',
-    text: 'Normalmente chegamos em até 30 minutos. A visita não é cobrada.',
+    icon: MapPin,
+    title: 'No local em até 30 minutos',
+    description:
+      'Visita técnica rápida em Belo Horizonte e nas cidades da região metropolitana.',
   },
   {
-    title: 'Você aprova o preço',
-    text: 'A gente mostra onde está o problema e passa o valor antes de mexer em qualquer coisa. Se não fechar, não paga nada.',
+    icon: Search,
+    title: 'Explicamos o problema',
+    description:
+      'Mostramos onde está o entupimento e o que causou, para você entender o que vai ser feito.',
   },
   {
-    title: 'Serviço feito',
-    text: 'Com garantia e nota fiscal. Dá pra pagar no Pix, cartão de débito ou crédito, dinheiro ou transferência.',
+    icon: Handshake,
+    title: 'Orçamento sem compromisso',
+    description:
+      'A visita é gratuita e você conhece o valor antes. O serviço só começa com a sua aprovação.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Serviço com garantia',
+    description:
+      'Garantia sobre o serviço executado, conforme o Código de Defesa do Consumidor.',
+  },
+  {
+    icon: FileText,
+    title: 'Nota fiscal',
+    description:
+      'Emitimos nota fiscal para residências, empresas e condomínios.',
   },
 ]
 
 export function AboutUs() {
   return (
-    <section id="como-funciona" className="bg-brand-gray py-14 md:py-20">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 md:px-6 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
-        <div>
-          <h2 className="text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-            Como a gente trabalha
-          </h2>
+    <section id="quem-somos" className="bg-brand-gray py-14 md:py-20">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          <div className="max-w-xl">
+            <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
+              Quem somos
+            </span>
 
-          <p className="mt-4 text-base leading-relaxed text-brand-ink/75 md:text-lg">
-            Entupimento nunca acontece em boa hora, e ninguém gosta de abrir a
-            porta pra um estranho sem saber quanto vai pagar. Por isso o nosso
-            jeito é simples: explicar o problema, combinar o preço antes e só
-            depois começar o serviço.
-          </p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
+              Por que escolher a Prumo Desentupidora
+            </h2>
 
-          <p className="mt-4 text-base leading-relaxed text-brand-ink/75 md:text-lg">
-            Atendemos casas, apartamentos, comércios e condomínios em BH e na
-            região metropolitana, 24 horas por dia.
-          </p>
-        </div>
+            <p className="mt-5 text-base leading-relaxed text-brand-ink/75 md:text-lg">
+              A Prumo é uma desentupidora de Belo Horizonte que atende a
+              capital e a Região Metropolitana 24 horas por dia. Trabalhamos com
+              máquinas rotativas e hidrojateamento, o que nos permite resolver
+              desde um ralo entupido até a rede de esgoto de um condomínio ou
+              de um restaurante.
+            </p>
 
-        <ol className="space-y-6">
-          {steps.map(({ title, text }, index) => (
-            <li key={title} className="flex gap-4">
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-navy text-sm font-bold text-white">
-                {index + 1}
-              </span>
+            <p className="mt-4 text-base leading-relaxed text-brand-ink/75 md:text-lg">
+              Quem chama uma desentupidora quer duas coisas: o problema
+              resolvido e nenhuma surpresa no preço. Por isso, antes de
+              qualquer serviço, explicamos o que está acontecendo e
+              apresentamos o orçamento. O trabalho só começa depois da sua
+              aprovação.
+            </p>
 
-              <div>
-                <h3 className="text-lg font-bold text-brand-ink">{title}</h3>
-                <p className="mt-1 text-base leading-relaxed text-brand-ink/70">
-                  {text}
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex items-center justify-center rounded-lg bg-brand-orange px-7 py-4 text-sm font-bold text-white transition-colors hover:bg-brand-orange-dark"
+            >
+              Falar com a Prumo
+            </a>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {highlights.map(({ icon: Icon, title, description }) => (
+              <div
+                key={title}
+                className="rounded-xl border border-black/5 bg-white p-5 shadow-sm"
+              >
+                <span className="flex size-11 items-center justify-center rounded-lg bg-brand-orange/10 text-brand-orange">
+                  <Icon className="size-6" aria-hidden="true" />
+                </span>
+                <h3 className="mt-4 text-base font-bold text-brand-ink">
+                  {title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-brand-ink/70">
+                  {description}
                 </p>
               </div>
-            </li>
-          ))}
-        </ol>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

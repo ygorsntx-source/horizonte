@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    'Desentupidora 24 horas em BH e região. Vaso, pia, ralo, esgoto, caixa de gordura e hidrojateamento. Visita sem custo e preço combinado antes de começar.',
+    'Desentupidora 24 horas em Belo Horizonte e Região Metropolitana. Desentupimento de vaso, pia, ralo, rede de esgoto e caixa de gordura, e hidrojateamento. Visita técnica gratuita e orçamento antes do serviço.',
 
   openGraph: {
     type: 'website',

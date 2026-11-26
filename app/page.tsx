@@ -1,8 +1,11 @@
 import { SiteHeader } from '@/components/site-header'
 import { Hero } from '@/components/hero'
+import { TrustStrip } from '@/components/trust-strip'
 import { Services } from '@/components/services'
+import { Problems } from '@/components/problems'
 import { Testimonials } from '@/components/testimonials'
 import { AboutUs } from '@/components/about-us'
+import { HowItWorks } from '@/components/how-it-works'
 import { ServiceArea } from '@/components/service-area'
 import { Faq } from '@/components/faq'
 import { ContactSection } from '@/components/contact-section'
@@ -16,9 +19,12 @@ export default function Page() {
       <SiteHeader />
       <main>
         <Hero />
+        <TrustStrip />
         <Services />
+        <Problems />
         <Testimonials />
         <AboutUs />
+        <HowItWorks />
         <ServiceArea />
         <Faq />
         <ContactSection />
