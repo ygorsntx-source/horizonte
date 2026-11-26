@@ -9,6 +9,7 @@ import {
   INSTAGRAM_URL,
   YOUTUBE_URL,
 } from '@/lib/site'
+import { CITIES } from '@/lib/cities'
 
 const serviceLinks = [
   { label: 'Vaso sanitário', href: '/servicos/desentupimento-de-vaso-sanitario' },
@@ -51,13 +52,24 @@ export function SiteFooter() {
           </a>
         </div>
 
-        <nav aria-label="Serviços">
+        <nav aria-label="Serviços e cidades">
           <p className="text-sm font-bold text-white">Serviços</p>
           <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
             {serviceLinks.map(({ label, href }) => (
               <li key={href}>
                 <Link href={href} className="hover:text-white">
                   {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-6 text-sm font-bold text-white">Cidades</p>
+          <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {CITIES.map((city) => (
+              <li key={city.slug}>
+                <Link href={`/desentupidora/${city.slug}`} className="hover:text-white">
+                  {city.name}
                 </Link>
               </li>
             ))}
