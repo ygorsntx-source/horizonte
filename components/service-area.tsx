@@ -6,7 +6,16 @@ const askMessage = encodeURIComponent(
   'Olá! Vocês atendem no meu endereço? Estou no bairro/cidade: ',
 )
 
-export function ServiceArea() {
+const DEFAULT_TEXT =
+  'A Prumo atende 24 horas em Belo Horizonte e nas cidades vizinhas, com desentupimento de vaso sanitário, pia, ralo e rede de esgoto, limpeza de caixa de gordura e hidrojateamento para residências, comércios, empresas e condomínios.'
+
+export function ServiceArea({
+  title = 'Desentupidora em Belo Horizonte e Região Metropolitana',
+  text = DEFAULT_TEXT,
+}: {
+  title?: string
+  text?: string
+}) {
   return (
     <section id="areas" className="bg-brand-navy py-14 text-white md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
@@ -16,14 +25,11 @@ export function ServiceArea() {
           </span>
 
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl">
-            Desentupidora em Belo Horizonte e Região Metropolitana
+            {title}
           </h2>
 
           <p className="mt-4 text-base leading-relaxed text-white/75 md:text-lg">
-            A Prumo atende 24 horas em Belo Horizonte e nas cidades vizinhas,
-            com desentupimento de vaso sanitário, pia, ralo e rede de esgoto,
-            limpeza de caixa de gordura e hidrojateamento para residências,
-            comércios, empresas e condomínios.
+            {text}
           </p>
         </div>
 
