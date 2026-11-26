@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { CNPJ } from '@/lib/site'
+import { CNPJ, SOCIAL_PROFILES } from '@/lib/site'
 import { MAIN_CITIES, OTHER_CITIES } from '@/lib/areas'
 import { GOOGLE_MAPS_URL } from '@/lib/reviews'
 
@@ -54,7 +54,7 @@ export const viewport: Viewport = {
 
 // Dados estruturados da Prumo Desentupidora (Schema.org).
 // "Plumber" é o tipo de empresa local do Schema.org que inclui desentupidoras.
-// Quando os perfis das redes sociais estiverem prontos, acrescente em sameAs.
+// Perfis das redes sociais: lib/site.ts (SOCIAL_PROFILES).
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Plumber',
@@ -91,7 +91,7 @@ const organizationJsonLd = {
     name: `${city}, MG`,
   })),
   hasMap: GOOGLE_MAPS_URL,
-  sameAs: [GOOGLE_MAPS_URL],
+  sameAs: [GOOGLE_MAPS_URL, ...SOCIAL_PROFILES],
 }
 
 export default function RootLayout({
