@@ -1,7 +1,7 @@
 
 import { ChevronDown } from 'lucide-react'
 
-const faqs = [
+export const HOME_FAQS = [
   {
     question: 'A Prumo Desentupidora atende 24 horas?',
     answer:
@@ -58,7 +58,15 @@ const faqs = [
   },
 ]
 
-export function Faq() {
+type FaqItem = { question: string; answer: string }
+
+export function Faq({
+  items = HOME_FAQS,
+  title = 'Perguntas frequentes sobre desentupimento',
+}: {
+  items?: FaqItem[]
+  title?: string
+}) {
   return (
     <section
       id="perguntas-frequentes"
@@ -71,7 +79,7 @@ export function Faq() {
           </span>
 
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-            Perguntas frequentes sobre desentupimento
+            {title}
           </h2>
 
           <p className="mt-3 text-base leading-relaxed text-brand-ink/70 md:text-lg">
@@ -80,7 +88,7 @@ export function Faq() {
         </div>
 
         <div className="mt-8 divide-y divide-black/8 rounded-lg border border-black/8">
-          {faqs.map((faq, index) => (
+          {items.map((faq, index) => (
             <details key={faq.question} className="group" open={index === 0}>
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left text-base font-bold leading-relaxed text-brand-ink transition-colors hover:bg-brand-gray [&::-webkit-details-marker]:hidden">
                 <h3>{faq.question}</h3>
