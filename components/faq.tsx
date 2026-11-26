@@ -3,47 +3,56 @@ import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
-    question: 'Vocês atendem de madrugada?',
+    question: 'A Prumo Desentupidora atende 24 horas?',
     answer:
-      'Sim. O atendimento é 24 horas. Pode ligar ou chamar no WhatsApp a qualquer hora.',
+      'Sim. Atendemos 24 horas em Belo Horizonte e na Região Metropolitana, inclusive à noite e de madrugada. Ligue ou chame no WhatsApp a qualquer hora.',
   },
   {
-    question: 'Quanto tempo vocês demoram pra chegar?',
+    question: 'Em quanto tempo a equipe chega?',
     answer:
-      'Normalmente a gente chega em até 30 minutos. Depende do seu bairro e de onde a equipe está na hora, então já te passamos uma previsão quando você chama.',
+      'A visita técnica é feita em até 30 minutos. Ao entrar em contato, informe o endereço para receber a previsão de chegada.',
   },
   {
-    question: 'Cobram pela visita?',
+    question: 'A visita técnica é cobrada?',
     answer:
-      'Não. A gente vai até o local, vê o problema e passa o orçamento sem cobrar nada por isso.',
+      'Não. A equipe vai até o local, avalia o problema e apresenta o orçamento sem cobrar pela visita.',
   },
   {
-    question: 'Quanto custa um desentupimento?',
+    question: 'Quanto custa um desentupimento em BH?',
     answer:
-      'Depende do que está entupido, de onde está o entupimento e do equipamento que vai precisar. Por isso a gente só passa o valor depois de ver o problema, e o serviço só começa se você aprovar.',
+      'O valor depende do tipo de entupimento, de onde ele está e do equipamento necessário. Por isso o orçamento é feito depois da avaliação no local, e o serviço só começa com a sua aprovação.',
   },
   {
-    question: 'Vocês fazem limpeza de caixa de gordura?',
+    question: 'Quais serviços a Prumo faz?',
     answer:
-      'Fazemos. Limpeza e desentupimento de caixa de gordura em casa, restaurante, comércio e condomínio.',
+      'Desentupimento de vaso sanitário, pia, ralo e rede de esgoto, limpeza e desentupimento de caixa de gordura e hidrojateamento de tubulações.',
   },
   {
-    question: 'O serviço tem garantia? Emitem nota fiscal?',
+    question: 'Posso usar soda cáustica ou produto desentupidor antes de chamar?',
     answer:
-      'Sim para as duas. O serviço tem garantia, conforme o que foi feito e o Código de Defesa do Consumidor, e emitimos nota fiscal.',
+      'Não é recomendado. Esses produtos podem danificar canos de PVC, causar queimaduras e, muitas vezes, não resolvem o entupimento. Se já usou, avise a equipe no atendimento.',
   },
   {
-    question: 'Quais formas de pagamento vocês aceitam?',
+    question: 'Quando o hidrojateamento é indicado?',
     answer:
-      'Pix, cartão de débito, cartão de crédito, dinheiro e transferência.',
+      'Quando a tubulação tem gordura, lodo ou resíduos grudados nas paredes, comum em cozinhas, restaurantes e condomínios, ou quando o entupimento volta com frequência. A indicação é feita depois da avaliação.',
   },
   {
-    question: 'Quais cidades vocês atendem?',
+    question: 'Os serviços têm garantia? Vocês emitem nota fiscal?',
     answer:
-      'Belo Horizonte e região metropolitana: Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Nova Lima, Sabará, Ibirité, Lagoa Santa e outras. Se tiver dúvida, chama no WhatsApp e informa o bairro.',
+      'Sim. Os serviços têm garantia, conforme o serviço executado e o Código de Defesa do Consumidor, e emitimos nota fiscal.',
   },
   {
-    question: 'Atendem empresas e condomínios?',
+    question: 'Quais as formas de pagamento?',
+    answer: 'Pix, cartão de crédito, cartão de débito, dinheiro e transferência.',
+  },
+  {
+    question: 'Quais cidades a Prumo atende?',
+    answer:
+      'Belo Horizonte e Região Metropolitana, incluindo Contagem, Betim, Ribeirão das Neves, Santa Luzia, Vespasiano, Nova Lima, Sabará, Ibirité e Lagoa Santa. Para outras cidades, consulte pelo WhatsApp.',
+  },
+  {
+    question: 'Vocês atendem empresas, restaurantes e condomínios?',
     answer:
       'Sim. Além de casas e apartamentos, atendemos comércios, restaurantes, empresas e condomínios.',
   },
@@ -57,12 +66,16 @@ export function Faq() {
     >
       <div className="mx-auto max-w-3xl px-4 md:px-6">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
-            Perguntas que a gente mais recebe
+          <span className="text-sm font-bold uppercase tracking-wider text-brand-orange">
+            Tire suas dúvidas
+          </span>
+
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-ink md:text-4xl">
+            Perguntas frequentes sobre desentupimento
           </h2>
 
           <p className="mt-3 text-base leading-relaxed text-brand-ink/70 md:text-lg">
-            Não achou sua dúvida aqui? Chama a gente no WhatsApp.
+            Não encontrou o que procurava? Fale com a nossa equipe pelo WhatsApp.
           </p>
         </div>
 
